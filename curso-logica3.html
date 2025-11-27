@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/curso-logica.css">
+  <title>Lógica de Programação | Byte&Byte</title>
+  <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+  <!----HEADER----->
+  <header style="background-color: #184b88;  padding-bottom: 30px">
+    <div class="container">
+      <nav>
+        <a>
+          <img src="" class="logo">
+        </a>
+        <ul class="ul">
+          <a href="index.html">Home</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="pratica.html">Pratica</a>
+          <a class="btn" href="cursos.html">Cursos</a>
+          <div class="close-icon" onclick="closeMenu()">
+            <img src="img/close.png" alt="icon-close    ">
+          </div>
+        </ul>
+        <div class="menu-icon" onclick="openMenu()">
+          <img src="img/menu.png" alt="icon-menu">
+        </div>
+      </nav>
+      </section>
+    </div>
+  </header>
+  <!----FIM-HEADER----->
+
+  <div class="container-cursos">
+    <aside class="sidebar">
+      <h3>📚 Conteúdo</h3>
+      <ul>
+        <li><a href="curso-logica1.html" onclick="loadContent('intro')">Introdução</a></li>
+        <li><a href="curso-logica2.html" onclick="loadContent('algorithms')">Algoritmos</a></li>
+        <li><a href="curso-logica3.html" class="active" onclick="loadContent('variables')">Variáveis</a></li>
+        <li><a href="curso-logica4.html" onclick="loadContent('conditions')">Condições</a></li>
+        <li><a href="curso-logica5.html" onclick="loadContent('loops')">Laços</a></li>
+        <li><a href="curso-logica6.html" onclick="loadContent('functions')">Funções</a></li>
+        <li><a href="curso-logica7.html" onclick="loadContent('arrays')">Arrays</a></li>
+      </ul>
+    </aside>
+    <main class="main-content">
+
+
+      <div class="intro-box">
+        <h2>📦 O que são Variáveis?</h2>
+        <p>
+          Variáveis são como “caixas” que armazenam valores para serem usados
+          e modificados durante a execução de um programa.
+        </p>
+      </div>
+
+      <h1>Variáveis</h1>
+      <p>
+        Uma <strong>variável</strong> é um espaço reservado na memória do
+        computador para guardar dados que podem ser alterados ao longo do
+        programa.
+      </p>
+
+      <div class="note-box">
+        <strong>💡 Pense assim:</strong> uma variável é como uma **caixa com
+        um nome**. Você coloca algo dentro dela (um número, um texto) e pode
+        trocar o conteúdo quando quiser.
+      </div>
+
+      <h2>Tipos de Dados</h2>
+      <p>
+        As variáveis podem armazenar diferentes tipos de valores. Os
+        principais são:
+      </p>
+
+      <h3>1. Números Inteiros</h3>
+      <p>Usados para valores sem casas decimais.</p>
+      <div class="code-example">idade = 25 ano = 2024 quantidade = 100</div>
+
+      <h3>2. Números Decimais</h3>
+      <p>Usados para valores com vírgula (ponto no computador).</p>
+      <div class="code-example">altura = 1.75 peso = 70.5 preco = 29.99</div>
+
+      <h3>3. Texto (String)</h3>
+      <p>Usados para armazenar frases ou palavras.</p>
+      <div class="code-example">
+        nome = "Maria Silva" cidade = "Mossoró" mensagem = "Bem-vindo ao
+        curso!"
+      </div>
+
+      <h3>4. Valores Lógicos (Booleanos)</h3>
+      <p>Usados para armazenar apenas dois valores: verdadeiro ou falso.</p>
+      <div class="code-example">
+        aprovado = VERDADEIRO chovendo = FALSO maiorDeIdade = VERDADEIRO
+      </div>
+
+      <h2>Como Declarar e Usar Variáveis</h2>
+      <p>Veja um exemplo em pseudocódigo:</p>
+      <div class="code-example">
+        ALGORITMO "Exemplo de Variáveis" INÍCIO // Declaração INTEIRO idade
+        REAL salario TEXTO nome LOGICO trabalhando // Atribuição de valores
+        idade <- 30 salario <- 5000.00 nome <- "Maria" trabalhando <- VERDADEIRO // Uso das variáveis ESCREVER "Nome: "
+          , nome ESCREVER "Idade: " , idade, " anos" ESCREVER "Salário: R$ " , salario FIM </div>
+
+          <div class="note-box">
+            <strong>📌 Regras para nomes de variáveis:</strong>
+            <ul style="margin-left: 1rem; margin-top: 0.5rem">
+              <li>Devem começar com uma letra</li>
+              <li>Não podem ter espaços ou acentos</li>
+              <li>Não podem ser palavras reservadas da linguagem</li>
+              <li>Use nomes descritivos para facilitar a leitura</li>
+            </ul>
+          </div>
+
+          <div class="exercise-box">
+            <h4>🎯 Exercício Prático</h4>
+            <p>
+              Crie variáveis para armazenar as seguintes informações de um
+              estudante:
+            </p>
+            <ul style="margin-left: 1.5rem">
+              <li>Nome</li>
+              <li>Idade</li>
+              <li>Curso</li>
+              <li>Se está matriculado (verdadeiro/falso)</li>
+            </ul>
+            <p>Depois, exiba todas as informações na tela.</p>
+          </div>
+
+          <div class="next-prev">
+            <a href="curso-logica2.html" class="btn-cursos">Algoritmos</a>
+            <a href="curso-logica4.html" class="btn-cursos">Condições</a>
+          </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

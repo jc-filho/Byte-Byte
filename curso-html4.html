@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-html.css">
+    <title>HTML – Introdução | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📗 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-html1.html">Introdução</a></li>
+                <li><a href="curso-html2.html">Tags Básicas</a></li>
+                <li><a href="curso-html3.html">Atributos</a></li>
+                <li><a href="curso-html4.html" class="active">Listas</a></li>
+                <li><a href="curso-html5.html">Imagens e Links</a></li>
+                <li><a href="curso-html6.html">Tabelas</a></li>
+                <li><a href="curso-html7.html">Formulários</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div id="content-area">
+
+                <h1>Listas em HTML</h1>
+                <p>As listas são usadas para organizar informações, agrupar itens e estruturar conteúdos em tópicos. Em
+                    HTML, existem três tipos principais de listas:</p>
+
+                <ul style="margin-left: 2rem;">
+                    <li><strong>Listas não ordenadas</strong> – &lt;ul&gt;</li>
+                    <li><strong>Listas ordenadas</strong> – &lt;ol&gt;</li>
+                    <li><strong>Listas de descrição</strong> – &lt;dl&gt;</li>
+                </ul>
+
+                <h2>1. Listas Não Ordenadas (&lt;ul&gt;)</h2>
+                <p>Esse tipo de lista mostra os itens com marcadores (bolinhas).</p>
+
+                <div class="code-example">
+                    &lt;ul&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Pão&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Leite&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Ovos&lt;/li&gt;<br>
+                    &lt;/ul&gt;
+                </div>
+
+                <div class="note-box"><strong>💡 Dica:</strong> Você pode mudar o estilo da bolinha com CSS usando
+                    <code>list-style-type</code>.</div>
+
+                <h2>2. Listas Ordenadas (&lt;ol&gt;)</h2>
+                <p>Nelas, os itens são numerados automaticamente.</p>
+
+                <div class="code-example">
+                    &lt;ol&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Ligar o computador&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Abrir o navegador&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Acessar o Byte&amp;Byte&lt;/li&gt;<br>
+                    &lt;/ol&gt;
+                </div>
+
+                <h3>Tipos de numeração</h3>
+                <p>Você pode mudar os números usando o atributo <strong>type</strong>:</p>
+
+                <ul style="margin-left: 2rem;">
+                    <li><strong>1</strong> – números (padrão)</li>
+                    <li><strong>A</strong> – letras maiúsculas</li>
+                    <li><strong>a</strong> – letras minúsculas</li>
+                    <li><strong>I</strong> – algarismos romanos maiúsculos</li>
+                    <li><strong>i</strong> – algarismos romanos minúsculos</li>
+                </ul>
+
+                <div class="code-example">
+                    &lt;ol type="A"&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Item A&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Item B&lt;/li&gt;<br>
+                    &lt;/ol&gt;
+                </div>
+
+                <h2>3. Lista de Descrição (&lt;dl&gt;)</h2>
+                <p>Usada para criar listas com termos e descrições.</p>
+
+                <div class="code-example">
+                    &lt;dl&gt;<br>
+                    &nbsp;&nbsp;&lt;dt&gt;HTML&lt;/dt&gt;<br>
+                    &nbsp;&nbsp;&lt;dd&gt;Linguagem de marcação para páginas web.&lt;/dd&gt;<br>
+                    <br>
+                    &nbsp;&nbsp;&lt;dt&gt;CSS&lt;/dt&gt;<br>
+                    &nbsp;&nbsp;&lt;dd&gt;Folhas de estilo para design.&lt;/dd&gt;<br>
+                    &lt;/dl&gt;
+                </div>
+
+                <h2>Listas Aninhadas</h2>
+                <p>Você pode colocar uma lista dentro da outra.</p>
+
+                <div class="code-example">
+                    &lt;ul&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Frutas<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Maçã&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Banana&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &nbsp;&nbsp;&lt;/li&gt;<br>
+                    &lt;/ul&gt;
+                </div>
+
+                <h2>Quando usar cada tipo?</h2>
+
+                <p><strong>✔ Usar &lt;ul&gt;:</strong> listas gerais, itens sem ordem.</p>
+                <p><strong>✔ Usar &lt;ol&gt;:</strong> receitas, tutoriais, passos.</p>
+                <p><strong>✔ Usar &lt;dl&gt;:</strong> glossários, definições, FAQ.</p>
+                <div class="exercise-box">
+                    <h3>Exercício</h3>
+                    <p>Crie uma lista ordenada com seus 5 sites favoritos, usando letras maiúsculas.</p>
+
+                </div>
+
+                <div class="next-prev">
+                    <a href="curso-html3.html" class="btn-cursos">Atributos</a>
+                    <a href="curso-html5.html" class="btn-cursos">Imagens e Links</a>
+                </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+
+    <style>
+        :root {
+            --cor-primaria: #ff7b00;
+            --cor-secundaria: #ff9f33;
+            --cor-fundo: #fff7f0;
+            --cor-texto: #2c2c2c;
+            --cor-card: #ffffff;
+            --cor-correta: #27ae60;
+            --cor-errada: #c0392b;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: var(--cor-primaria);
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .quiz-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--cor-card);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .question {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--cor-texto);
+        }
+
+        .options button {
+            width: 100%;
+            background: white;
+            border: 2px solid var(--cor-primaria);
+            padding: 12px;
+            margin: 8px 0;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .options button:hover {
+            background: #ffe2c4;
+        }
+
+        .correct {
+            background: var(--cor-correta) !important;
+            color: white;
+            border-color: var(--cor-correta);
+        }
+
+        .wrong {
+            background: var(--cor-errada) !important;
+            color: white;
+            border-color: var(--cor-errada);
+        }
+
+        .score {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 2rem;
+            display: none;
+        }
+
+        .btn {
+            background: var(--cor-primaria);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            display: block;
+            margin: 2rem auto 0;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--cor-secundaria);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>🔥 QUIZ AVANÇADO DE JAVASCRIPT</header>
+
+    <div class="quiz-container">
+        <div id="quiz-box">
+            <h2 class="question" id="question">Carregando pergunta...</h2>
+
+            <div class="options">
+                <button onclick="checkAnswer(0)" id="btn0"></button>
+                <button onclick="checkAnswer(1)" id="btn1"></button>
+                <button onclick="checkAnswer(2)" id="btn2"></button>
+                <button onclick="checkAnswer(3)" id="btn3"></button>
+            </div>
+        </div>
+
+        <div class="score" id="score"></div>
+
+        <button class="btn" id="restart" onclick="restartQuiz()" style="display: none;">
+            Reiniciar Quiz
+        </button>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "Qual é a diferença entre var, let e const no JavaScript?",
+                answers: [
+                    "Todas funcionam igual, apenas variam em sintaxe.",
+                    "var tem escopo global/function, let e const têm escopo de bloco.",
+                    "let é mais rápido que const.",
+                    "const só funciona em arrays."
+                ],
+                correct: 1
+            },
+            {
+                question: "O que o método Array.prototype.map() faz?",
+                answers: [
+                    "Filtra valores do array.",
+                    "Transforma cada elemento e retorna um novo array.",
+                    "Remove elementos duplicados.",
+                    "Ordena os elementos do array."
+                ],
+                correct: 1
+            },
+            {
+                question: "Qual é o resultado de: console.log([] == false)?",
+                answers: [
+                    "true",
+                    "false",
+                    "undefined",
+                    "Erro de sintaxe"
+                ],
+                correct: 0
+            },
+            {
+                question: "Qual é a saída de: console.log(typeof NaN)?",
+                answers: [
+                    "number",
+                    "undefined",
+                    "NaN",
+                    "float"
+                ],
+                correct: 0
+            },
+            {
+                question: "O que é uma IIFE (Immediately Invoked Function Expression)?",
+                answers: [
+                    "Função executada automaticamente ao ser definida.",
+                    "Função que só roda com await.",
+                    "Classe que inicializa sozinha.",
+                    "Objeto que cria funções."
+                ],
+                correct: 0
+            },
+            {
+                question: "Qual é a finalidade do método bind()?",
+                answers: [
+                    "Clonar um objeto.",
+                    "Forçar um valor para 'this' em uma função.",
+                    "Criar arrays imutáveis.",
+                    "Travar valores de variáveis."
+                ],
+                correct: 1
+            },
+            {
+                question: "O que significa 'closure' em JavaScript?",
+                answers: [
+                    "Variáveis globais vazias.",
+                    "Função que lembra seu escopo mesmo após ser executada.",
+                    "Erro causado por escopo.",
+                    "Método interno de arrays."
+                ],
+                correct: 1
+            },
+            {
+                question: "O que 'use strict' faz?",
+                answers: [
+                    "Melhora a velocidade do código.",
+                    "Desativa funções assíncronas.",
+                    "Ativa regras mais rígidas evitando erros silenciosos.",
+                    "Permite usar classes privadas."
+                ],
+                correct: 2
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            document.querySelectorAll(".options button").forEach(btn => {
+                btn.classList.remove("correct", "wrong");
+                btn.disabled = false;
+            });
+
+            document.getElementById("question").innerText = questions[currentQuestion].question;
+            questions[currentQuestion].answers.forEach((ans, i) => {
+                document.getElementById("btn" + i).innerText = ans;
+            });
+        }
+
+        function checkAnswer(choice) {
+            const correct = questions[currentQuestion].correct;
+
+            const buttons = document.querySelectorAll(".options button");
+
+            if (choice === correct) {
+                buttons[choice].classList.add("correct");
+                score++;
+            } else {
+                buttons[choice].classList.add("wrong");
+                buttons[correct].classList.add("correct");
+            }
+
+            buttons.forEach(btn => btn.disabled = true);
+
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    loadQuestion();
+                } else {
+                    finishQuiz();
+                }
+            }, 900);
+        }
+
+        function finishQuiz() {
+            document.getElementById("quiz-box").style.display = "none";
+            const scoreBox = document.getElementById("score");
+            scoreBox.style.display = "block";
+
+            scoreBox.innerHTML = `
+                Você acertou <strong>${score}</strong> de <strong>${questions.length}</strong> perguntas!<br><br>
+                ${score <= 3 ? "📘 Continue estudando!" :
+                score <= 6 ? "🔥 Ótimo! Você está indo muito bem!" :
+                    "💯 Excelente! Você domina JavaScript!"}
+            `;
+
+            document.getElementById("restart").style.display = "block";
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById("quiz-box").style.display = "block";
+            document.getElementById("score").style.display = "none";
+            document.getElementById("restart").style.display = "none";
+            loadQuestion();
+        }
+
+        loadQuestion();
+    </script>
+
+</body>
+</html>

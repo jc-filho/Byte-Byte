@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-html.css">
+    <title>HTML – Introdução | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid #e67e22;
+        }
+
+        th {
+            background: #e67e22;
+            color: white;
+            padding: .7rem;
+        }
+
+        td {
+            padding: .7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📗 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-html1.html">Introdução</a></li>
+                <li><a href="curso-html2.html">Tags Básicas</a></li>
+                <li><a href="curso-html3.html">Atributos</a></li>
+                <li><a href="curso-html4.html">Listas</a></li>
+                <li><a href="curso-html5.html">Imagens e Links</a></li>
+                <li><a href="curso-html6.html">Tabelas</a></li>
+                <li><a href="curso-html7.html" class="active">Formulários</a></li>
+            </ul>
+        </aside>
+
+
+        <main class="main-content">
+            <h1>Formulários em HTML</h1>
+            <p>
+                Os <strong>formulários</strong> são usados para coletar dados do usuário. Eles estão presentes em
+                cadastros, login, pesquisas, e tudo que envolve interação.
+            </p>
+
+            <h2>Tag Principal: &lt;form&gt;</h2>
+            <p>A estrutura básica de um formulário é:</p>
+
+            <div class="code-example">
+                &lt;form action="processar.php" method="POST"&gt;
+                <!-- campos -->
+                &lt;/form&gt;
+            </div>
+
+            <div class="code-example">
+                <strong>action:</strong> define o arquivo que receberá os dados.<br>
+                <strong>method:</strong> pode ser <strong>GET</strong> ou <strong>POST</strong>.
+            </div>
+
+            <h2>📌 Campos de Entrada (Inputs)</h2>
+
+            <h3>Tipos mais comuns</h3>
+
+            <table>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Uso</th>
+                    <th>Exemplo</th>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td>Entrada de texto comum</td>
+                    <td><input type="text" placeholder="Seu nome"></td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td>Campo para e-mail válido</td>
+                    <td><input type="email" placeholder="exemplo@email.com"></td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td>Senha oculta</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td>number</td>
+                    <td>Aceita apenas números</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>date</td>
+                    <td>Escolher datas</td>
+                    <td><input type="date"></td>
+                </tr>
+            </table>
+
+            <div class="code-example">
+                &lt;input type="text" placeholder="Digite seu nome"&gt;
+                &lt;input type="email" placeholder="Seu e-mail"&gt;
+                &lt;input type="password" placeholder="Senha"&gt;
+            </div>
+
+            <h2>📌 Caixas de Seleção</h2>
+
+            <h3>Checkbox</h3>
+            <div class="code-example">
+                &lt;input type="checkbox" id="java"&gt; Java &lt;br&gt;
+                &lt;input type="checkbox" id="html"&gt; HTML &lt;br&gt;
+                &lt;input type="checkbox" id="css"&gt; CSS
+            </div>
+
+            <h3>Radio Button</h3>
+            <div class="code-example">
+                &lt;input type="radio" name="sexo"&gt; Masculino
+                &lt;input type="radio" name="sexo"&gt; Feminino
+            </div>
+
+            <h2>📌 Campos Especiais</h2>
+
+            <h3>Select (Menu de opções)</h3>
+            <div class="code-example">
+                &lt;select&gt;
+                &lt;option&gt;Escolha uma linguagem&lt;/option&gt;
+                &lt;option&gt;JavaScript&lt;/option&gt;
+                &lt;option&gt;Python&lt;/option&gt;
+                &lt;option&gt;C++&lt;/option&gt;
+                &lt;/select&gt;
+            </div>
+
+            <h3>Textarea (Caixa de texto grande)</h3>
+            <div class="code-example">
+                &lt;textarea rows="5" cols="40"&gt;&lt;/textarea&gt;
+            </div>
+
+            <h2>📌 Botões</h2>
+            <div class="code-example">
+                &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                &lt;button type="reset"&gt;Limpar&lt;/button&gt;
+            </div>
+
+            <h2>🎯 Exemplo Completo de Formulário</h2>
+
+            <div class="code-example">
+                &lt;form action="cadastro.php" method="POST"&gt; <br>
+
+                &lt;h3&gt;Cadastro de Usuário&lt;/h3&gt;<br>
+
+                Nome: &lt;br&gt;<br>
+                &lt;input type="text" name="nome"&gt;&lt;br&gt;&lt;br&gt;<br>
+
+                E-mail: &lt;br&gt;<br>
+                &lt;input type="email" name="email"&gt;&lt;br&gt;&lt;br&gt;<br>
+
+                Senha: &lt;br&gt;<br>
+                &lt;input type="password" name="senha"&gt;&lt;br&gt;&lt;br&gt;<br>
+
+                Gênero: &lt;br&gt;<br>
+                &lt;input type="radio" name="sexo" value="m"&gt; Masculino<br>
+                &lt;input type="radio" name="sexo" value="f"&gt; Feminino &lt;br&gt;&lt;br&gt;v
+
+                Linguagens de Interesse:&lt;br&gt;v
+                &lt;input type="checkbox"&gt; HTML<br>
+                &lt;input type="checkbox"&gt; CSS<br>
+                &lt;input type="checkbox"&gt; JavaScript &lt;br&gt;&lt;br&gt;<br>
+
+                Estado:&lt;br&gt;<br>
+                &lt;select&gt;<br>
+                &lt;option&gt;Selecione&lt;/option&gt;<br>
+                &lt;option&gt;RN&lt;/option&gt;<br>
+                &lt;option&gt;CE&lt;/option&gt;<br>
+                &lt;option&gt;PB&lt;/option&gt;<br>
+                &lt;/select&gt;<br>
+                &lt;br&gt;&lt;br&gt;<br>
+
+                Observações:&lt;br&gt;<br>
+                &lt;textarea rows="5"&gt;&lt;/textarea&gt;<br>
+
+                &lt;br&gt;&lt;br&gt;<br>
+                &lt;button type="submit"&gt;Enviar Cadastro&lt;/button&gt;<br>
+
+                &lt;/form&gt;<br>
+            </div>
+
+            <div class="next-prev">
+                <a href="curso-html6.html" class="btn-cursos">Tabelas</a>
+                <a href="pratica.html" class="btn-cursos">Venha pratica</a>
+            </div>
+
+        </main>
+    </div>
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

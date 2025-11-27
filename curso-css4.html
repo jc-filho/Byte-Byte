@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-css.css">
+    <title>CSS | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>🎨 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-css1.html">Introdução</a></li>
+                <li><a href="curso-css2.html">Seletores e Propriedades</a></li>
+                <li><a href="curso-css3.html">Cores e Unidades</a></li>
+                <li><a href="curso-css4.html" class="active">Box Model</a></li>
+                <li><a href="curso-css5.html">Display e Layout</a></li>
+                <li><a href="curso-css6.html">Flexbox</a></li>
+                <li><a href="curso-css7.html">Grid Layout</a></li>
+                <li><a href="curso-css8.html">Responsividade</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1>Box Model – Entendendo o Modelo de Caixas do CSS</h1>
+
+            <p>O <strong>Box Model</strong> é um dos conceitos mais importantes do CSS.
+                Ele define como **todos os elementos HTML** são representados visualmente na tela:
+                como caixas compostas por <strong>content</strong>, <strong>padding</strong>,
+                <strong>border</strong> e <strong>margin</strong>.
+            </p>
+
+            <h2>📦 O que é o Box Model?</h2>
+            <p>Todo elemento HTML é uma caixa, mesmo que você não perceba.
+                Essa caixa é composta por 4 camadas:</p>
+
+            <div class="code-example">
+                CONTENT → O conteúdo (texto, imagem, etc.)
+                PADDING → Espaço interno entre o conteúdo e a borda
+                BORDER → A borda da caixa
+                MARGIN → Espaço externo, separação entre elementos
+            </div>
+
+
+            <h2>Camadas do Box Model</h2>
+
+            <h3>1️⃣ Content (Conteúdo)</h3>
+            <p>É aquilo que realmente está dentro da caixa, como textos, imagens ou botões.</p>
+
+            <div class="code-example">
+                div {
+                width: 200px;
+                height: 100px;
+                background-color: #ffa94d;
+                }
+            </div>
+
+            <h3>2️⃣ Padding (Preenchimento interno)</h3>
+            <p>Cria espaço ENTRE o conteúdo e a borda.</p>
+
+            <div class="code-example">
+                div {
+                padding: 20px;
+                }
+            </div>
+
+            <div class="note-box">
+                <strong>💡 Dica:</strong> Padding aumenta o tamanho visível da caixa.
+            </div>
+
+            <h3>3️⃣ Border (Borda)</h3>
+            <p>A borda envolve todo o conteúdo + padding.</p>
+
+            <div class="code-example">
+                div {
+                border: 3px solid #ff7b00;
+                border-radius: 10px;
+                }
+            </div>
+
+            <h3>4️⃣ Margin (Margem externa)</h3>
+            <p>A margem cria espaço ao redor da caixa, separando-a de outros elementos.</p>
+
+            <div class="code-example">
+                div {
+                margin: 40px;
+                }
+            </div>
+
+            <h2>📐 Calculando o tamanho total de uma caixa</h2>
+            <p>Por padrão, o navegador calcula o tamanho assim:</p>
+
+            <div class="code-example">
+                Tamanho total horizontal =
+                width + padding-esq + padding-dir + border-esq + border-dir + margin-esq + margin-dir
+
+                Tamanho total vertical =
+                height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom
+            </div>
+
+            <h2>🔧 Usando box-sizing</h2>
+            <p>O CSS possui a propriedade <strong>box-sizing</strong> para facilitar a vida:</p>
+
+            <div class="code-example">
+                /* O width NÃO considera padding e borda */
+                box-sizing: content-box;
+
+                /* O width JÁ inclui padding e borda */
+                box-sizing: border-box;
+            </div>
+
+            <div class="note-box">
+                <strong>Recomendado:</strong> Sempre usar <strong>border-box</strong> no seu projeto.
+            </div>
+
+            <h2>Exemplo Completo</h2>
+
+            <div class="code-example">
+                .caixa {
+                width: 300px;
+                padding: 20px;
+                border: 4px solid #ff8800;
+                margin: 40px auto;
+                box-sizing: border-box;
+                background-color: #fff4e0;
+                }
+            </div>
+
+            <div class="exercise-box">
+                <h4>🎯 DESAFIO</h4>
+                <p>Crie 3 caixas diferentes utilizando:</p>
+                <ul>
+                    <li>padding variado</li>
+                    <li>bordas arredondadas</li>
+                    <li>margens automáticas</li>
+                    <li>box-sizing: border-box</li>
+                    <li>cores diferentes</li>
+                </ul>
+                <p>Tente criar um card de produto usando apenas Box Model!</p>
+            </div>
+
+            <div class="next-prev">
+                <a href="curso-css3.html" class="btn-cursos">cores e Unidades</a>
+                <a href="curso-css5.html" class="btn-cursos">Display e Layout</a>
+            </div>
+
+        </main>
+    </div>
+
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

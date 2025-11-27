@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-logica.css">
+    <title>Lógica de Programação | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Pratica</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-logica1.html" class="active" onclick="loadContent('intro')">Introdução</a></li>
+                <li><a href="curso-logica2.html" onclick="loadContent('algorithms')">Algoritmos</a></li>
+                <li><a href="curso-logica3.html" onclick="loadContent('variables')">Variáveis</a></li>
+                <li><a href="curso-logica4.html" onclick="loadContent('conditions')">Condições</a></li>
+                <li><a href="curso-logica5.html" onclick="loadContent('loops')">Laços</a></li>
+                <li><a href="curso-logica6.html" onclick="loadContent('functions')">Funções</a></li>
+                <li><a href="curso-logica7.html" onclick="loadContent('arrays')">Arrays</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            <div id="content-area">
+                <h1>Introdução à Lógica de Programação</h1>
+
+                <p>A <strong>lógica de programação</strong> é a base fundamental para qualquer linguagem de programação.
+                    É como aprender a pensar de forma estruturada para resolver problemas usando computadores.</p>
+
+                <h2>O que é Lógica de Programação?</h2>
+                <p>Lógica de programação é o processo de organizar e estruturar o pensamento para criar soluções
+                    computacionais. É como criar uma receita detalhada que o computador pode seguir passo a passo.</p>
+
+                <div class="code-example">
+                    ALGORITMO "Fazer um Sanduíche"
+                    INÍCIO
+                    1. Pegar duas fatias de pão
+                    2. Passar manteiga no pão
+                    3. Colocar presunto
+                    4. Colocar queijo
+                    5. Fechar o sanduíche
+                    FIM
+                </div>
+
+                <h2>Conceitos Fundamentais</h2>
+
+                <h3>1. Sequência</h3>
+                <p>As instruções são executadas uma após a outra, em ordem:</p>
+
+                <div class="code-example">
+                    INÍCIO
+                    ESCREVER "Olá!"
+                    ESCREVER "Como você está?"
+                    ESCREVER "Bem-vindo ao curso!"
+                    FIM
+                </div>
+
+                <div class="note-box">
+                    <strong>💡 Dica:</strong> A ordem das instruções é muito importante! Trocar a ordem pode mudar
+                    completamente o resultado.
+                </div>
+
+                <h3>2. Entrada, Processamento e Saída</h3>
+                <p>Todo programa segue este padrão básico:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li><strong>Entrada:</strong> Receber dados do usuário</li>
+                    <li><strong>Processamento:</strong> Manipular os dados</li>
+                    <li><strong>Saída:</strong> Mostrar o resultado</li>
+                </ul>
+
+                <div class="code-example">
+                    ALGORITMO "Calcular Idade"
+                    INÍCIO
+                    // ENTRADA
+                    ESCREVER "Digite seu ano de nascimento: "
+                    LER ano_nascimento
+
+                    // PROCESSAMENTO
+                    idade = 2024 - ano_nascimento
+
+                    // SAÍDA
+                    ESCREVER "Sua idade é: ", idade
+                    FIM
+                </div>
+
+                <div class="interactive-console" id="console" style="display: none;">
+                    <div id="console-output">Digite seu ano de nascimento: </div>
+                    <input type="number" id="console-input" placeholder="Digite aqui..."
+                        onkeypress="handleInput(event)">
+                </div>
+
+                <div class="exercise-box">
+                    <h4>🎯 Exercício Prático</h4>
+                    <p>Tente criar um algoritmo para calcular a área de um retângulo. Você precisará de:</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Duas entradas: largura e altura</li>
+                        <li>Um processamento: largura × altura</li>
+                        <li>Uma saída: o resultado</li>
+                    </ul>
+                </div>
+
+                <h2>Por que Aprender Lógica de Programação?</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                    <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧠</div>
+                        <strong>Desenvolve o Raciocínio</strong>
+                        <p>Melhora sua capacidade de resolver problemas de forma estruturada</p>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
+                        <strong>Base para Qualquer Linguagem</strong>
+                        <p>Os conceitos são universais, aplicáveis em Python, Java, C++, etc.</p>
+                    </div>
+                    <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💼</div>
+                        <strong>Oportunidades de Carreira</strong>
+                        <p>Abre portas para o mercado de tecnologia</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-prev">
+                <div></div>
+                <a href="curso-logica2.html" class="btn-cursos" onclick="loadContent('algorithms')">Algoritmos</a>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

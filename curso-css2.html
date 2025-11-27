@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-css.css">
+    <title>CSS | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>🎨 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-css1.html">Introdução</a></li>
+                <li><a href="curso-css2.html" class="active">Seletores e Propriedades</a></li>
+                <li><a href="curso-css3.html">Cores e Unidades</a></li>
+                <li><a href="curso-css4.html">Box Model</a></li>
+                <li><a href="curso-css5.html">Display e Layout</a></li>
+                <li><a href="curso-css6.html">Flexbox</a></li>
+                <li><a href="curso-css7.html">Grid Layout</a></li>
+                <li><a href="curso-css8.html">Responsividade</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+
+            <h1>Seletores e Propriedades do CSS</h1>
+            <p>Em CSS, os <strong>seletores</strong> definem quais elementos do HTML serão estilizados e as
+                <strong>propriedades</strong> especificam o estilo aplicado. Entender bem esses dois conceitos é
+                essencial para dominar o CSS.</p>
+
+            <h2>O que são Seletores?</h2>
+            <p>Seletores são “endereços” usados para selecionar elementos HTML e aplicar estilos. Cada seletor possui um
+                propósito diferente.</p>
+
+            <div class="code-example">
+                h1 {
+                color: blue;
+                }
+
+                .titulo {
+                font-size: 30px;
+                }
+
+                #principal {
+                background: yellow;
+                }
+            </div>
+
+            <h2>Tipos de Seletores</h2>
+
+            <h3>1️⃣ Seletor por Tag</h3>
+            <p>Seleciona todos os elementos de uma determinada tag.</p>
+
+            <div class="code-example">
+                p {
+                color: #333;
+                line-height: 1.5;
+                }
+            </div>
+
+            <h3>2️⃣ Seletor por Classe</h3>
+            <p>A classe é usada para agrupar elementos com estilos iguais.</p>
+
+            <div class="code-example">
+                .caixa {
+                background: #ffe9c6;
+                padding: 20px;
+                border-radius: 10px;
+                }
+            </div>
+
+            <h3>3️⃣ Seletor por ID</h3>
+            <p>Usado para identificar um elemento único.</p>
+
+            <div class="code-example">
+                #menu {
+                background: #ffb347;
+                }
+            </div>
+
+            <h3>4️⃣ Seletores Universais</h3>
+            <p>Seleciona todos os elementos da página.</p>
+
+            <div class="code-example">
+                * {
+                margin: 0;
+                padding: 0;
+                }
+            </div>
+
+            <h3>5️⃣ Seletores de Atributos</h3>
+            <p>Seleciona elementos com atributos específicos.</p>
+
+            <div class="code-example">
+                input[type="text"] {
+                border: 2px solid orange;
+                }
+
+                a[target="_blank"] {
+                color: green;
+                }
+            </div>
+
+            <h3>6️⃣ Seletor Descendente</h3>
+            <p>Aplica estilo a elementos DENTRO de outros.</p>
+
+            <div class="code-example">
+                div p {
+                color: orange;
+                }
+            </div>
+
+            <h3>7️⃣ Seletor Filho Direto</h3>
+            <p>Seleciona apenas filhos DIRETOS.</p>
+
+            <div class="code-example">
+                ul > li {
+                color: brown;
+                }
+            </div>
+
+            <h3>8️⃣ Seletor de Estado (Pseudo-classes)</h3>
+
+            <div class="code-example">
+                a:hover {
+                color: red;
+                text-decoration: underline;
+                }
+
+                input:focus {
+                border-color: orange;
+                }
+            </div>
+
+            <h3>9️⃣ Pseudo-elementos</h3>
+
+            <div class="code-example">
+                p::first-letter {
+                font-size: 40px;
+                color: orange;
+                }
+
+                p::before {
+                content: "👉 ";
+                }
+            </div>
+
+            <div class="note-box">
+                <strong>💡 Dica:</strong> Prefira usar <strong>classes</strong> ao invés de IDs para estilizar
+                elementos. IDs têm prioridade maior e podem atrapalhar estilos mais complexos.
+            </div>
+
+            <h2>O que são Propriedades?</h2>
+            <p>As propriedades definem o estilo aplicado ao elemento selecionado.</p>
+
+            <h3>Exemplos de propriedades importantes:</h3>
+
+            <ul>
+                <li><strong>color:</strong> cor do texto</li>
+                <li><strong>background:</strong> cor de fundo</li>
+                <li><strong>font-size:</strong> tamanho da fonte</li>
+                <li><strong>padding:</strong> espaço interno</li>
+                <li><strong>margin:</strong> espaço externo</li>
+                <li><strong>border:</strong> borda do elemento</li>
+                <li><strong>width / height:</strong> dimensões</li>
+            </ul>
+
+            <div class="code-example">
+                .card {
+                background: #fff6e0;
+                border: 1px solid #ffb347;
+                padding: 20px;
+                margin: 10px;
+                width: 200px;
+                height: 150px;
+                }
+            </div>
+
+            <div class="exercise-box">
+                <h4>🎯 Desafio Prático</h4>
+                <p>Crie um bloco colorido com:</p>
+                <ul>
+                    <li>Classe chamada <strong>.box-laranja</strong></li>
+                    <li>Cor de fundo laranja</li>
+                    <li>Borda arredondada</li>
+                    <li>Texto centralizado</li>
+                    <li>Padding de 20px</li>
+                </ul>
+                <p>Depois, crie um seletor <strong>:hover</strong> mudando a cor ao passar o mouse.</p>
+            </div>
+
+            <div class="next-prev">
+                <a href="curso-css1.html" class="btn-cursos">Introdução</a>
+                <a href="curso-css3.html" class="btn-cursos">Cores e Unidades</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-logica.css">
+    <title>Lógica de Programação | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88;  padding-bottom: 30px">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Pratica</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+            </section>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-logica1.html" onclick="loadContent('intro')">Introdução</a></li>
+                <li><a href="curso-logica2.html" onclick="loadContent('algorithms')">Algoritmos</a></li>
+                <li><a href="curso-logica3.html" onclick="loadContent('variables')">Variáveis</a></li>
+                <li><a href="curso-logica4.html" class="active" onclick="loadContent('conditions')">Condições</a></li>
+                <li><a href="curso-logica5.html" onclick="loadContent('loops')">Laços</a></li>
+                <li><a href="curso-logica6.html" onclick="loadContent('functions')">Funções</a></li>
+                <li><a href="curso-logica7.html" onclick="loadContent('arrays')">Arrays</a></li>
+            </ul>
+        </aside>
+
+
+        <div class="main-content">
+
+            <div class="intro-box">
+                <h2>🔀 Estruturas Condicionais</h2>
+                <p>Permitem que o programa tome decisões com base em condições.</p>
+            </div>
+
+            <h1>Estruturas Condicionais</h1>
+            <p>As <strong>condições</strong> servem para que o programa execute diferentes ações dependendo de uma
+                situação.</p>
+
+            <h2>Estrutura SE...ENTÃO</h2>
+            <p>Executa um bloco de código apenas se a condição for verdadeira:</p>
+            <div class="code-example">
+                ALGORITMO "Verificar Idade"
+                INÍCIO
+                ESCREVER "Digite sua idade: "
+                LER idade
+
+                SE idade >= 18 ENTÃO
+                ESCREVER "Você é maior de idade"
+                FIM SE
+                FIM
+            </div>
+
+            <h2>SE...ENTÃO...SENÃO</h2>
+            <p>Executa um bloco se a condição for verdadeira, outro se for falsa:</p>
+            <div class="code-example">
+                ALGORITMO "Verificar Nota"
+                INÍCIO
+                ESCREVER "Digite sua nota: "
+                LER nota
+
+                SE nota >= 7 ENTÃO
+                ESCREVER "Aprovado!"
+                SENÃO
+                ESCREVER "Reprovado!"
+                FIM SE
+                FIM
+            </div>
+
+            <h2>SE...SENÃO SE...SENÃO</h2>
+            <p>Permite várias verificações:</p>
+            <div class="code-example">
+                ALGORITMO "Conceito da Nota"
+                INÍCIO
+                ESCREVER "Digite sua nota: "
+                LER nota
+
+                SE nota >= 9 ENTÃO
+                ESCREVER "Conceito A"
+                SENÃO SE nota >= 7 ENTÃO
+                ESCREVER "Conceito B"
+                SENÃO SE nota >= 5 ENTÃO
+                ESCREVER "Conceito C"
+                SENÃO
+                ESCREVER "Conceito D"
+                FIM SE
+                FIM
+            </div>
+
+            <h2>Operadores de Comparação</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); gap:1rem;">
+                <div style="background:#f8f9fa;padding:1rem;text-align:center;border-radius:6px;">
+                    <strong>=</strong><br>Igual
+                </div>
+                <div style="background:#f8f9fa;padding:1rem;text-align:center;border-radius:6px;">
+                    <strong>≠</strong><br>Diferente
+                </div>
+                <div style="background:#f8f9fa;padding:1rem;text-align:center;border-radius:6px;">
+                    <strong>&gt;</strong><br>Maior
+                </div>
+                <div style="background:#f8f9fa;padding:1rem;text-align:center;border-radius:6px;">
+                    <strong>&lt;</strong><br>Menor
+                </div>
+                <div style="background:#f8f9fa;padding:1rem;text-align:center;border-radius:6px;">
+                    <strong>&gt;=</strong><br>Maior ou igual
+                </div>
+                <div style="background:#f8f9fa;padding:1rem;text-align:center;border-radius:6px;">
+                    <strong>&lt;=</strong><br>Menor ou igual
+                </div>
+            </div>
+
+            <div class="exercise-box">
+                <h4>🎯 Exercício</h4>
+                <p>Crie um algoritmo que leia três números e exiba o maior deles.</p>
+            </div>
+
+            <div class="next-prev">
+                <a href="curso-logica3.html" class="btn-cursos">Variáveis</a>
+                <a href="curso-logica5.html" class="btn-cursos">Laços</a>
+            </div>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

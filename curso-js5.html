@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-js.css">
+    <title> JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!---- HEADER ---->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!---- FIM HEADER ---->
+
+    <div class="container-cursos">
+
+        <!---- MENU LATERAL ---->
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html" >Introdução</a></li>
+                <li><a href="curso-js2.html">Variáveis</a></li>
+                <li><a href="curso-js3.html">Operadores</a></li>
+                <li><a href="curso-js4.html">Funções</a></li>
+                <li><a href="curso-js5.html"class="active">Condicionais</a></li>
+                <li><a href="curso-js6.html">Loops</a></li>
+                <li><a href="curso-js7.html">Objetos</a></li>
+                <li><a href="curso-js8.html">Arrays</a></li>
+                <li><a href="curso-js9.html">DOM</a></li>
+            </ul>
+        </aside>
+
+        <!---- CONTEÚDO PRINCIPAL ---->
+ <main class="main-content">
+        <h1>Condicionais em JavaScript</h1>
+        <p>
+            As estruturas condicionais permitem que o JavaScript tome decisões.
+            Elas verificam uma condição e executam um bloco de código dependendo se a condição é 
+            <strong>verdadeira (true)</strong> ou <strong>falsa (false)</strong>.
+        </p>
+
+        <!-- INTRO -->
+        <h2>O que são Condicionais?</h2>
+        <p>
+            Condicionais são usadas para controlar o fluxo do programa.  
+            Elas permitem que partes diferentes do código sejam executadas dependendo de uma condição.
+        </p>
+
+        <!-- EXEMPLO -->
+        <div class="code-example">
+            if (condicao) {  
+                // código executado se a condição for verdadeira  
+            } else {  
+                // código executado se for falsa  
+            }
+        </div>
+
+        <h2>Tipos de Condicionais em JavaScript</h2>
+
+        <!-- IF -->
+        <h3>1. Condicional <code>if</code></h3>
+        <p>Executa um bloco *somente se* a condição for verdadeira.</p>
+
+        <div class="code-example">
+            let idade = 18;
+
+            if (idade >= 18) {
+                console.log("Você é maior de idade.");
+            }
+        </div>
+
+        <div class="note-box">
+            <strong>💡 Dica:</strong> Sempre que a condição for verdadeira, o código dentro de <code>{ }</code> será executado.
+        </div>
+
+        <!-- IF ELSE -->
+        <h3>2. Condicional <code>if...else</code></h3>
+        <p>Define um caminho alternativo caso a condição seja falsa.</p>
+
+        <div class="code-example">
+            let hora = 20;
+
+            if (hora < 18) {
+                console.log("Boa tarde!");
+            } else {
+                console.log("Boa noite!");
+            }
+        </div>
+
+        <!-- ELSE IF -->
+        <h3>3. Condicional <code>else if</code></h3>
+        <p>Usado quando há várias possibilidades.</p>
+
+        <div class="code-example">
+            let nota = 75;
+
+            if (nota >= 90) {
+                console.log("A");
+            } else if (nota >= 70) {
+                console.log("B");
+            } else {
+                console.log("C");
+            }
+        </div>
+
+        <!-- SWITCH -->
+        <h2>4. Estrutura <code>switch</code></h2>
+        <p>
+            O <code>switch</code> é usado quando desejamos comparar uma variável com diversos valores possíveis.
+        </p>
+
+        <div class="code-example">
+            let dia = 3;
+
+            switch (dia) {
+                case 1:
+                    console.log("Domingo");
+                    break;
+                case 2:
+                    console.log("Segunda");
+                    break;
+                case 3:
+                    console.log("Terça");
+                    break;
+                default:
+                    console.log("Dia inválido");
+                    break;
+            }
+        </div>
+
+        <!-- COMPARAÇÃO -->
+        <h2>Comparações Mais Usadas</h2>
+
+        <ul style="margin-left: 1.5rem;">
+            <li><code>==</code> - igual (não considera tipo)</li>
+            <li><code>===</code> - estritamente igual (considera tipo)</li>
+            <li><code>!=</code> - diferente</li>
+            <li><code>&gt;</code> - maior que</li>
+            <li><code>&lt;</code> - menor que</li>
+            <li><code>&gt;=</code> - maior ou igual</li>
+            <li><code>&lt;=</code> - menor ou igual</li>
+        </ul>
+
+        <!-- OPERADORES LÓGICOS -->
+        <h2>Operadores Lógicos nas Condicionais</h2>
+
+        <div class="code-example">
+            &&  -> AND (e)  
+            ||  -> OR (ou)  
+            !   -> NOT (negação)
+        </div>
+
+        <h3>Exemplo com operadores:</h3>
+
+        <div class="code-example">
+            let idade = 25;
+            let carteira = true;
+
+            if (idade >= 18 && carteira === true) {
+                console.log("Pode dirigir.");
+            } else {
+                console.log("Não pode dirigir.");
+            }
+        </div>
+
+        <!-- EXERCÍCIO -->
+        <div class="exercise-box">
+            <h4>🎯 Exercício Prático</h4>
+            <p>Crie um algoritmo que:</p>
+            <ul>
+                <li>Receba o nome do aluno</li>
+                <li>Receba sua nota</li>
+                <li>Imprima se ele está: Aprovado, Recuperação ou Reprovado</li>
+                <li>Use <strong>if, else if e else</strong></li>
+            </ul>
+        </div>
+
+
+            <div class="next-prev">
+               <a href="curso-js4.html" class="btn-cursos">Funções</a>
+                <a href="curso-js6.html" class="btn-cursos">Loops</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-js.css">
+    <title> JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!---- HEADER ---->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!---- FIM HEADER ---->
+
+    <div class="container-cursos">
+
+        <!---- MENU LATERAL ---->
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html" >Introdução</a></li>
+                <li><a href="curso-js2.html">Variáveis</a></li>
+                <li><a href="curso-js3.html">Operadores</a></li>
+                <li><a href="curso-js4.html"class="active">Funções</a></li>
+                <li><a href="curso-js5.html">Condicionais</a></li>
+                <li><a href="curso-js6.html">Loops</a></li>
+                <li><a href="curso-js7.html">Objetos</a></li>
+                <li><a href="curso-js8.html">Arrays</a></li>
+                <li><a href="curso-js9.html">DOM</a></li>
+            </ul>
+        </aside>
+
+        <!---- CONTEÚDO PRINCIPAL ---->
+               <main class="main-content">
+            <h1>Funções em JavaScript</h1>
+
+            <p>As <strong>funções</strong> são blocos de código reutilizáveis que executam uma tarefa específica.  
+               Elas permitem organizar melhor o programa, evitar repetição e tornar o código mais limpo.</p>
+
+            <h2>O que é uma Função?</h2>
+            <p>Uma função é um conjunto de instruções agrupadas para realizar uma ação. Assim como uma “máquina”:
+                você envia um valor (entrada), ela processa, e devolve um resultado (saída).</p>
+
+            <div class="code-example">
+                function dizerOla() {
+                    console.log("Olá, Mundo!");
+                }
+                dizerOla();
+            </div>
+
+            <div class="note-box">
+                <strong>💡 Dica:</strong> Funções evitam repetir o mesmo código várias vezes.
+            </div>
+
+            <h2>Partes de uma Função</h2>
+            <ul style="margin-left: 1.5rem;">
+                <li><strong>function</strong> – palavra-chave</li>
+                <li><strong>nomeDaFuncao</strong> – nome que identifica a função</li>
+                <li><strong>()</strong> – pode conter parâmetros</li>
+                <li><strong>{ }</strong> – bloco de código</li>
+            </ul>
+
+            <div class="code-example">
+                function soma(a, b) {
+                    return a + b;
+                }
+
+                console.log(soma(5, 3));
+            </div>
+
+            <h3>Parâmetros</h3>
+            <p>Parâmetros são valores que você passa para a função usar internamente.</p>
+
+            <h3>Retorno</h3>
+            <p>A palavra <strong>return</strong> envia um valor de volta para quem chamou a função.</p>
+
+            <div class="exercise-box">
+                <h4>🎯 Desafio</h4>
+                <p>Crie uma função que receba dois números e retorne a média deles.</p>
+            </div>
+
+            <h2>Tipos de Função</h2>
+
+            <h3>1. Função Tradicional</h3>
+            <div class="code-example">
+                function mensagem() {
+                    console.log("Essa é uma função tradicional!");
+                }
+                mensagem();
+            </div>
+
+            <h3>2. Função com Parâmetros</h3>
+            <div class="code-example">
+                function apresentar(nome) {
+                    console.log("Olá, " + nome);
+                }
+                apresentar("José");
+            </div>
+
+            <h3>3. Função com Retorno</h3>
+            <div class="code-example">
+                function dobro(num) {
+                    return num * 2;
+                }
+                console.log(dobro(10));
+            </div>
+
+            <h3>4. Arrow Function (Função Moderna)</h3>
+            <p>Forma mais curta e moderna de escrever funções.</p>
+
+            <div class="code-example">
+                const multiplicar = (a, b) => a * b;
+                console.log(multiplicar(4, 2));
+            </div>
+
+            <h3>5. Função Anônima</h3>
+            <div class="code-example">
+                const falar = function() {
+                    console.log("Função sem nome!");
+                }
+                falar();
+            </div>
+
+            <h3>6. Função Dentro de Objeto</h3>
+            <div class="code-example">
+                const pessoa = {
+                    nome: "Ana",
+                    falar() {
+                        console.log("Olá, sou " + this.nome);
+                    }
+                }
+                pessoa.falar();
+            </div>
+
+            <h2>Funções Nativamente no JavaScript</h2>
+
+            <ul style="margin-left: 1.5rem;">
+                <li><strong>Math.random()</strong> – número aleatório</li>
+                <li><strong>Math.floor()</strong> – arredonda para baixo</li>
+                <li><strong>alert()</strong> – exibe mensagem</li>
+                <li><strong>parseInt()</strong> – converte para inteiro</li>
+                <li><strong>parseFloat()</strong> – converte para número decimal</li>
+                <li><strong>console.log()</strong> – imprime no console</li>
+            </ul>
+
+            <h2>Funções e Escopo</h2>
+            <p>Escopo define onde variáveis e funções podem ser acessadas.</p>
+
+            <h3>Escopo Local</h3>
+            <div class="code-example">
+                function teste() {
+                    let x = 10;
+                    console.log(x);
+                }
+                // console.log(x);  // Erro! Está fora da função.
+            </div>
+
+            <h3>Escopo Global</h3>
+            <div class="code-example">
+                let y = 50;
+
+                function mostrar() {
+                    console.log(y);
+                }
+                mostrar();
+            </div>
+
+            <div class="exercise-box">
+                <h4>🎯 Desafio Final</h4>
+                <p>Crie uma função que receba nome, idade e cidade, e retorne uma frase formatada.</p>
+            </div>
+
+
+            <div class="next-prev">
+               <a href="curso-js3.html" class="btn-cursos">Operadores</a>
+                <a href="curso-js5.html" class="btn-cursos">Condicionais</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+</body>
+
+</html>

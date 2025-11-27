@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-html.css">
+    <title>HTML – Introdução | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📗 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-html1.html">Introdução</a></li>
+                <li><a href="curso-html2.html">Tags Básicas</a></li>
+                <li><a href="curso-html3.html" class="active">Atributos</a></li>
+                <li><a href="curso-html4.html">Listas</a></li>
+                <li><a href="curso-html5.html">Imagens e Links</a></li>
+                <li><a href="curso-html6.html">Tabelas</a></li>
+                <li><a href="curso-html7.html">Formulários</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h1>Atributos HTML</h1>
+
+            <p>
+                Os <strong>atributos HTML</strong> são informações extras adicionadas dentro das tags para modificar seu
+                comportamento.
+                Eles permitem configurar propriedades como cor, tamanho, identificação, links, acessibilidade e muito
+                mais.
+            </p>
+
+            <h2>O que são Atributos?</h2>
+            <p>
+                Um atributo é formado por um <strong>nome</strong> e um <strong>valor</strong>.
+            </p>
+
+            <div class="code-example">
+                &lt;tag atributo="valor"&gt; Conteúdo &lt;/tag&gt;
+            </div>
+
+            <h2>Atributos Mais Usados no HTML</h2>
+
+            <h3>1. <code>id</code> – Identificar um elemento</h3>
+            <p>Usado para identificar um elemento único na página:</p>
+
+            <div class="code-example">
+                &lt;h1 id="titulo-principal"&gt;Bem-vindo!&lt;/h1&gt;
+            </div>
+
+            <h3>2. <code>class</code> – Agrupar elementos</h3>
+            <p>Usado para aplicar o mesmo estilo em vários elementos:</p>
+
+            <div class="code-example">
+                &lt;p class="descricao"&gt;Esse é um parágrafo...&lt;/p&gt;
+            </div>
+
+            <h3>3. <code>src</code> – Caminho de arquivos</h3>
+            <p>Usado para carregar imagens, vídeos e scripts:</p>
+
+            <div class="code-example">
+                &lt;img src="img/foto.png" alt="Minha foto"&gt;
+            </div>
+
+            <h3>4. <code>href</code> – Links</h3>
+            <p>Indica o destino de um link:</p>
+
+            <div class="code-example">
+                &lt;a href="https://google.com"&gt;Acessar Google&lt;/a&gt;
+            </div>
+
+            <h3>5. <code>alt</code> – Texto alternativo de imagens</h3>
+            <p>Ajuda na acessibilidade e no SEO:</p>
+
+            <div class="code-example">
+                &lt;img src="logo.png" alt="Logo da empresa"&gt;
+            </div>
+
+            <h3>6. <code>title</code> – Texto exibido ao passar o mouse</h3>
+
+            <div class="code-example">
+                &lt;p title="Dica!"&gt;Passe o mouse aqui!&lt;/p&gt;
+            </div>
+
+            <h2>Atributos Globais</h2>
+            <p>Podem ser usados em qualquer tag HTML:</p>
+
+            <ul style="margin-left: 1.5rem;">
+                <li><strong>id</strong></li>
+                <li><strong>class</strong></li>
+                <li><strong>style</strong></li>
+                <li><strong>title</strong></li>
+                <li><strong>hidden</strong></li>
+                <li><strong>lang</strong></li>
+            </ul>
+
+            <div class="exercise-box">
+                <h4>🎯 Exercício Prático</h4>
+                <p>Crie um parágrafo com:</p>
+                <ul>
+                    <li>Classe chamada <strong>"texto-destaque"</strong></li>
+                    <li>Texto alternativo usando <code>title</code></li>
+                    <li>Uma cor usando <code>style</code></li>
+                </ul>
+            </div>
+
+            <div class="next-prev">
+                <a href="curso-html2.html" class="btn-cursos">Tags Básicas</a>
+                <a href="curso-html4.html" class="btn-cursos">Listas</a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

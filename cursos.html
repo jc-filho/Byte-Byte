@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos | Byte&Byte</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cursos.css">
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <header style="background-image: url('img/background-home.jpg');">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Pratica</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Cursos</h1>
+                </div>
+            </section>
+        </div>
+    </header>
+    <section class="container">
+        <h2 class="title">Nossos Cursos</h2>
+
+        <div class="courses-grid">
+
+            <div class="card logica">
+                <h3>Curso de Lógica de Programação</h3>
+                <p>Aprenda a base da programação com raciocínio lógico, algoritmos e exercícios práticos.</p>
+                <a href="curso-logica1.html" class="btn-cursos logica-btn">Acessar Conteúdo</a>
+            </div>
+
+            <div class="card html">
+                <h3>Curso de HTML</h3>
+                <p>Aprenda a estruturar páginas web do zero com tags, semântica e boas práticas de desenvolvimento.</p>
+                <a href="curso-html1.html" class="btn-cursos html-btn">Acessar Conteúdo</a>
+            </div>
+
+            <div class="card css">
+                <h3>Curso de CSS</h3>
+                <p>Domine estilos modernos, responsividade e layouts profissionais utilizando Flexbox e Grid.</p>
+                <a href="curso-css1.html" class="btn-cursos css-btn">Acessar Conteúdo</a>
+            </div>
+
+            <div class="card js">
+                <h3>Curso de JavaScript</h3>
+                <p>Entenda lógica, funções, eventos e manipulação de DOM para criar sites interativos.</p>
+                <a href="curso-js1.html" class="btn-cursos js-btn">Acessar Conteúdo</a>
+            </div>
+
+        </div>
+
+        <!-- Seção Extra -->
+        <div class="info-section">
+            <h2 class="info-title">Por que aprender programação?</h2>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <div class="info-card-title">Maior Oportunidade no Mercado</div>
+                    <div class="info-card-desc">
+                        A área de tecnologia cresce todos os anos e oferece milhares de vagas com ótimos salários.
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-title">Desenvolvimento de Projetos Reais</div>
+                    <div class="info-card-desc">
+                        Aprender programação permite criar sites, sistemas, aplicativos e até automatizar tarefas.
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-title">Raciocínio Lógico Aprimorado</div>
+                    <div class="info-card-desc">
+                        A prática da lógica melhora a habilidade de resolver problemas de forma rápida e eficiente.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!---FOOTER---->
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

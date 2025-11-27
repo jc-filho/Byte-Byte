@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-css.css">
+    <title>CSS | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>🎨 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-css1.html">Introdução</a></li>
+                <li><a href="curso-css2.html">Seletores e Propriedades</a></li>
+                <li><a href="curso-css3.html">Cores e Unidades</a></li>
+                <li><a href="curso-css4.html" >Box Model</a></li>
+                <li><a href="curso-css5.html"class="active">Display e Layout</a></li>
+                <li><a href="curso-css6.html">Flexbox</a></li>
+                <li><a href="curso-css7.html">Grid Layout</a></li>
+                <li><a href="curso-css8.html">Responsividade</a></li>
+            </ul>
+        </aside>
+
+          <main class="main-content">
+
+            <h1>Display & Layout (CSS Clássico)</h1>
+            <p>Antes dos sistemas modernos como Flexbox e Grid, os layouts eram construídos com métodos mais simples (e às vezes mais difíceis). Aqui vamos aprender como funcionavam as versões antigas de layout do CSS, que ainda são úteis para entender o passado e manipular código legado.</p>
+
+            <!-- Display block -->
+            <h2>1️⃣ display: block</h2>
+            <p>Um elemento <strong>block</strong> ocupa toda a largura disponível e sempre quebra linha.</p>
+
+            <div class="code-example">
+                div {<br>
+                &nbsp;&nbsp;display: block;<br>
+                }
+            </div>
+
+            <ul>
+                <li>Ocupa 100% da linha</li>
+                <li>Sempre inicia em uma nova linha</li>
+                <li>Permite definir width/height</li>
+            </ul>
+
+            <!-- Inline -->
+            <h2>2️⃣ display: inline</h2>
+            <p>O elemento fica na mesma linha. **Não aceita width e height**.</p>
+
+            <div class="code-example">
+                span {<br>
+                &nbsp;&nbsp;display: inline;<br>
+                }
+            </div>
+
+            <div class="note-box">
+                💡 <strong>Dica:</strong> inline é indicado para textos, links e ícones pequenos.
+            </div>
+
+            <!-- inline-block -->
+            <h2>3️⃣ display: inline-block</h2>
+            <p>Combina o melhor dos dois mundos: fica na linha, mas aceita width/height.</p>
+
+            <div class="code-example">
+                img {<br>
+                &nbsp;&nbsp;display: inline-block;<br>
+                &nbsp;&nbsp;width: 200px;<br>
+                }
+            </div>
+
+            <!-- Float system -->
+            <h2>4️⃣ O sistema de Layout com Float (CSS Antigo)</h2>
+            <p>Antes do Flexbox, **todas as páginas eram feitas com float**. É o sistema mais clássico do CSS.</p>
+
+            <h3>📌 Como funciona o float?</h3>
+            <ul>
+                <li>O elemento "flutua" para a esquerda ou direita</li>
+                <li>Permite criar colunas</li>
+                <li>Precisa do <strong>clear</strong> para evitar que o conteúdo suba demais</li>
+            </ul>
+
+            <div class="code-example">
+                .coluna {<br>
+                &nbsp;&nbsp;width: 50%;<br>
+                &nbsp;&nbsp;float: left;<br>
+                }<br><br>
+
+                .clear {<br>
+                &nbsp;&nbsp;clear: both;<br>
+                }
+            </div>
+
+            <h3>📌 Problemas do float</h3>
+            <ul>
+                <li>Dificuldade de centralização</li>
+                <li>Quebras inesperadas</li>
+                <li>Necessidade de clearfix</li>
+            </ul>
+
+            <div class="note-box">
+                ⚠️ Float **não foi criado para layouts**, mas era a única forma disponível na época.
+            </div>
+
+            <!-- Position -->
+            <h2>5️⃣ Position (Sistema Antigo de Layout)</h2>
+
+            <h3>📌 position: static</h3>
+            <p>Padrão. O navegador decide a posição natural.</p>
+
+            <h3>📌 position: relative</h3>
+            <p>Move o elemento sem tirá-lo do fluxo.</p>
+
+            <div class="code-example">
+                .box {<br>
+                &nbsp;&nbsp;position: relative;<br>
+                &nbsp;&nbsp;top: 10px;<br>
+                &nbsp;&nbsp;left: 20px;<br>
+                }
+            </div>
+
+            <h3>📌 position: absolute</h3>
+            <p>Remove o elemento do fluxo e posiciona relativo ao pai.</p>
+
+            <div class="code-example">
+                .popup {<br>
+                &nbsp;&nbsp;position: absolute;<br>
+                &nbsp;&nbsp;right: 0;<br>
+                &nbsp;&nbsp;top: 0;<br>
+                }
+            </div>
+
+            <h3>📌 position: fixed</h3>
+            <p>Fixa o elemento na tela.</p>
+
+            <div class="code-example">
+                .menu-fixo {<br>
+                &nbsp;&nbsp;position: fixed;<br>
+                &nbsp;&nbsp;bottom: 10px;<br>
+                &nbsp;&nbsp;right: 10px;<br>
+                }
+            </div>
+
+            <!-- Tables -->
+            <h2>6️⃣ Layout com Table (muito antigo!)</h2>
+            <p>Antes do Float, os sites eram construídos usando tabelas para estruturar o layout.</p>
+
+            <div class="code-example">
+                &lt;table&gt;<br>
+                &nbsp;&nbsp;&lt;tr&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Menu&lt;/td&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Conteúdo&lt;/td&gt;<br>
+                &nbsp;&nbsp;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </div>
+
+            <div class="note-box">
+                ❌ Hoje é **proibido** usar tabelas para layout.  
+                ✔️ Use apenas para dados.
+            </div>
+
+            <!-- EXERCÍCIO -->
+            <div class="exercise-box">
+                <h3>🎯 DESAFIO PRÁTICO</h3>
+                <p>Crie uma página com 2 colunas usando apenas:</p>
+                <ul>
+                    <li>float</li>
+                    <li>clear</li>
+                    <li>inline-block</li>
+                </ul>
+                <p>📌 Depois, compare com Flexbox para ver a evolução!</p>
+            </div>
+
+
+            <div class="next-prev">
+                <a href="curso-css3.html" class="btn-cursos">Box Model</a>
+                <a href="curso-css6.html" class="btn-cursos">Flexbox</a>
+            </div>
+
+        </main>
+    </div>
+
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

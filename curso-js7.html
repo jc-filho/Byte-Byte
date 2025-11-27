@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-js.css">
+    <title> JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!---- HEADER ---->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!---- FIM HEADER ---->
+
+    <div class="container-cursos">
+
+        <!---- MENU LATERAL ---->
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html" >Introdução</a></li>
+                <li><a href="curso-js2.html">Variáveis</a></li>
+                <li><a href="curso-js3.html">Operadores</a></li>
+                <li><a href="curso-js4.html">Funções</a></li>
+                <li><a href="curso-js5.html">Condicionais</a></li>
+                <li><a href="curso-js6.html">Loops</a></li>
+                <li><a href="curso-js7.html"class="active">Objetos</a></li>
+                <li><a href="curso-js8.html">Arrays</a></li>
+                <li><a href="curso-js9.html">DOM</a></li>
+            </ul>
+        </aside>
+
+        <!---- CONTEÚDO PRINCIPAL ---->
+ <main class="main-content">
+
+            <h1>Objetos em JavaScript</h1>
+
+            <p>
+                Os <strong>objetos</strong> são uma das partes mais importantes do JavaScript.  
+                Eles permitem armazenar vários valores em uma única estrutura composta por
+                <strong>chave → valor</strong>.
+            </p>
+
+            <h2>O que é um Objeto?</h2>
+            <p>Um objeto é uma coleção de informações organizadas em pares:</p>
+
+            <div class="code-example">
+                const pessoa = {  
+                    nome: "Ana",  
+                    idade: 17,  
+                    cidade: "Mossoró"  
+                };
+            </div>
+
+            <h2>Propriedades</h2>
+            <p>As informações dentro do objeto são chamadas de <strong>propriedades</strong>.</p>
+
+            <div class="note-box">
+                <strong>📌 Exemplo:</strong>  
+                Em <code>pessoa.nome</code>, “nome” é uma propriedade.
+            </div>
+
+            <h3>Acessando Propriedades</h3>
+
+            <div class="code-example">
+                console.log(pessoa.nome);  
+                console.log(pessoa["idade"]);
+            </div>
+
+            <h2>Métodos</h2>
+            <p>
+                Quando uma propriedade contém uma função, chamamos isso de <strong>método</strong>.
+            </p>
+
+            <div class="code-example">
+                const aluno = {
+                    nome: "José",
+                    nota: 9.5,
+                    apresentar() {
+                        console.log("Olá, meu nome é " + this.nome);
+                    }
+                };
+
+                aluno.apresentar();
+            </div>
+
+            <h2>Objetos Aninhados</h2>
+            <p>Objetos podem conter outros objetos dentro.</p>
+
+            <div class="code-example">
+                const escola = {
+                    nome: "Byte&Byte",
+                    endereco: {
+                        rua: "Av. Principal",
+                        numero: 120
+                    }
+                };
+
+                console.log(escola.endereco.rua);
+            </div>
+
+            <h2>Arrays de Objetos</h2>
+            <p>Você também pode ter vários objetos dentro de um array.</p>
+
+            <div class="code-example">
+                const produtos = [
+                    { nome: "Mouse", preco: 30 },
+                    { nome: "Teclado", preco: 70 },
+                    { nome: "Monitor", preco: 850 }
+                ];
+
+                console.log(produtos[2].nome); // Monitor
+            </div>
+
+            <h2>Adicionar e Editar Propriedades</h2>
+
+            <div class="code-example">
+                const carro = { marca: "Fiat", ano: 2012 };
+
+                carro.cor = "Prata";    // adiciona
+                carro.ano = 2015;       // altera
+
+                console.log(carro);
+            </div>
+
+            <h2>Remover Propriedades</h2>
+
+            <div class="code-example">
+                delete carro.cor;
+            </div>
+
+            <h2>Percorrer um Objeto</h2>
+
+            <div class="code-example">
+                const aluno = { nome: "Carlos", idade: 18, turma: "3º Info" };
+
+                for (let chave in aluno) {
+                    console.log(chave + ": " + aluno[chave]);
+                }
+            </div>
+
+            <h2>Por que Objetos são importantes?</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+
+                <div style="background:#ffe3c2; padding:1rem; border-radius:8px; text-align:center;">
+                    <div style="font-size:2rem;">🧩</div>
+                    <strong>Organização</strong>
+                    <p>Deixa os dados agrupados de forma clara.</p>
+                </div>
+
+                <div style="background:#ffd8d8; padding:1rem; border-radius:8px; text-align:center;">
+                    <div style="font-size:2rem;">⚙️</div>
+                    <strong>Flexibilidade</strong>
+                    <p>Podem ser modificados a qualquer momento.</p>
+                </div>
+
+                <div style="background:#e3ffe3; padding:1rem; border-radius:8px; text-align:center;">
+                    <div style="font-size:2rem;">🚀</div>
+                    <strong>Base para APIs</strong>
+                    <p>JavaScript moderno trabalha intensamente com objetos.</p>
+                </div>
+
+            </div>
+
+            <div class="exercise-box">
+                <h4>🎯 Exercício Prático</h4>
+                <p>Crie um objeto chamado <strong>livro</strong> com:</p>
+                <ul>
+                    <li>título</li>
+                    <li>autor</li>
+                    <li>ano</li>
+                    <li>método apresentar()</li>
+                </ul>
+                <p>E exiba no console.</p>
+            </div>
+
+
+    
+
+            <div class="next-prev">
+               <a href="curso-js6.html" class="btn-cursos">loops</a>
+                <a href="curso-js8.html" class="btn-cursos">Arrays</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-css.css">
+    <title>CSS | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>🎨 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html" class="active">Introdução</a></li>
+                <li><a href="curso-js2.html">Seletores e Propriedades</a></li>
+                <li><a href="curso-js3.html">Cores e Unidades</a></li>
+                <li><a href="curso-js4.html">Box Model</a></li>
+                <li><a href="curso-js5.html">Display e Layout</a></li>
+                <li><a href="curso-js6.html">Flexbox</a></li>
+                <li><a href="curso-js7.html">Grid Layout</a></li>
+                <li><a href="curso-js8.html">Responsividade</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+
+            <h1>Introdução ao CSS</h1>
+
+            <p>CSS (Cascading Style Sheets) é a linguagem usada para estilizar páginas HTML. Com ele você controla
+                cores, tamanhos, posicionamento, fontes, espaçamentos e praticamente tudo o que define o visual de um
+                site moderno.</p>
+
+            <h2>O que é CSS?</h2>
+            <p>CSS é uma linguagem que define a aparência dos elementos HTML. O HTML cria a estrutura, enquanto o CSS
+                deixa tudo bonito, organizado e profissional.</p>
+
+            <div class="code-example">
+                h1 {
+                color: orange;
+                font-size: 30px;
+                text-align: center;
+                }
+            </div>
+
+            <h2>Como usar o CSS?</h2>
+            <p>Existem 3 formas principais de usar CSS em uma página:</p>
+
+            <h3>1. CSS Inline</h3>
+            <div class="code-example">
+                &lt;h1 style="color: orange;"&gt;Título&lt;/h1&gt;
+            </div>
+
+            <h3>2. CSS Interno</h3>
+            <div class="code-example">
+                &lt;style&gt;
+                p { color: #d35400; }
+                &lt;/style&gt;
+            </div>
+
+            <h3>3. CSS Externo (o MAIS usado)</h3>
+            <div class="code-example">
+                &lt;link rel="stylesheet" href="style.css"&gt;
+            </div>
+
+            <div class="note-box">
+                <strong>💡 Dica:</strong> Sempre prefira CSS externo! Mantém tudo organizado.
+            </div>
+
+            <h2>Sintaxe do CSS</h2>
+            <p>A estrutura básica do CSS é composta por:</p>
+
+            <ul>
+                <li><strong>Seletor</strong> — quem você quer estilizar;</li>
+                <li><strong>Propriedade</strong> — o que você quer alterar;</li>
+                <li><strong>Valor</strong> — como você quer alterar;</li>
+            </ul>
+
+            <div class="code-example">
+                seletor {
+                propriedade: valor;
+                }
+            </div>
+
+            <h2>Principais Seletores</h2>
+
+            <h3>Seletor por Tag</h3>
+            <div class="code-example">p { color: orange; }</div>
+
+            <h3>Seletor por Classe</h3>
+            <div class="code-example">.botao { background: #e67e22; }</div>
+
+            <h3>Seletor por ID</h3>
+            <div class="code-example">#titulo { font-size: 40px; }</div>
+
+            <h3>Seletor Universal</h3>
+            <div class="code-example">* { margin: 0; padding: 0; }</div>
+
+            <div class="exercise-box">
+                <h4>🎯 Exercício</h4>
+                <p>Crie um estilo que deixe todos os parágrafos com texto laranja e tamanho 18px.</p>
+            </div>
+
+            <h2>Cores no CSS</h2>
+
+            <h3>Formas de definir cores:</h3>
+            <ul>
+                <li>Nome: <strong>orange</strong></li>
+                <li>Hexadecimal: <strong>#e67e22</strong></li>
+                <li>RGB: <strong>rgb(230, 126, 34)</strong></li>
+                <li>HSL: <strong>hsl(28, 80%, 52%)</strong></li>
+                <li>Gradientes</li>
+            </ul>
+
+            <div class="code-example">
+                background: linear-gradient(to right, #e67e22, #d35400);
+            </div>
+
+            <h2>Unidades Mais Usadas</h2>
+
+            <ul>
+                <li><strong>px</strong> – tamanho fixo</li>
+                <li><strong>%</strong> – relativo ao elemento pai</li>
+                <li><strong>em / rem</strong> – relativo ao tamanho da fonte</li>
+                <li><strong>vh / vw</strong> – relativo à tela</li>
+            </ul>
+
+            <h2>Box Model (muito importante!)</h2>
+            <p>Todo elemento HTML é uma caixa composta por:</p>
+
+            <ul>
+                <li><strong>Content</strong> – o conteúdo</li>
+                <li><strong>Padding</strong> – espaço interno</li>
+                <li><strong>Border</strong> – borda do elemento</li>
+                <li><strong>Margin</strong> – espaçamento externo</li>
+            </ul>
+
+            <div class="code-example">
+                div {
+                margin: 20px;
+                padding: 15px;
+                border: 2px solid #e67e22;
+                }
+            </div>
+
+            <h2>Principais Propriedades do CSS</h2>
+
+            <ul>
+                <li>color</li>
+                <li>background</li>
+                <li>font-size</li>
+                <li>margin</li>
+                <li>padding</li>
+                <li>border</li>
+                <li>width / height</li>
+                <li>display</li>
+                <li>flex</li>
+                <li>position</li>
+            </ul>
+
+            <div class="next-prev">
+                <div></div>
+                <a href="curso-css2.html" class="btn-cursos">Seletores e Propriedades</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

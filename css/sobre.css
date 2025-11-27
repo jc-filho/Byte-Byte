@@ -1,0 +1,36 @@
+ /* ---- SEÇÃO ESTILO MIGHTY ---- */
+ .secao-sobre-escura {
+     background: #1d579e;
+     padding: 80px 0;
+ }
+
+ .sobre-container {
+     max-width: 900px;
+     margin: auto;
+     color: white;
+ }
+
+ .titulo-sobre {
+     font-size: 38px;
+     font-weight: 700;
+     color: #ffffff;
+     margin-bottom: 25px;
+ }
+
+ .secao-sobre-escura p {
+     color: #ffffff;
+     font-size: 18px;
+     line-height: 1.8;
+     margin-bottom: 20px;
+ }
+
+ /* RESPONSIVO */
+ @media (max-width: 768px) {
+     .titulo-sobre {
+         font-size: 30px;
+     }
+
+     .sobre-container {
+         padding: 0 20px;
+     }
+ }

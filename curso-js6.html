@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-js.css">
+    <title> JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!---- HEADER ---->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!---- FIM HEADER ---->
+
+    <div class="container-cursos">
+
+        <!---- MENU LATERAL ---->
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html" >Introdução</a></li>
+                <li><a href="curso-js2.html">Variáveis</a></li>
+                <li><a href="curso-js3.html">Operadores</a></li>
+                <li><a href="curso-js4.html">Funções</a></li>
+                <li><a href="curso-js5.html">Condicionais</a></li>
+                <li><a href="curso-js6.html"class="active">Loops</a></li>
+                <li><a href="curso-js7.html">Objetos</a></li>
+                <li><a href="curso-js8.html">Arrays</a></li>
+                <li><a href="curso-js9.html">DOM</a></li>
+            </ul>
+        </aside>
+
+        <!---- CONTEÚDO PRINCIPAL ---->
+ <main class="main-content">
+            <div id="content-area">
+
+                <h1>Loops em JavaScript</h1>
+
+                <p>Os <strong>loops</strong> permitem executar blocos de código repetidamente. Eles são essenciais
+                    quando precisamos repetir uma ação várias vezes sem reescrever o código.</p>
+
+                <h2>🔁 Por que usar Loops?</h2>
+                <ul>
+                    <li>Evitar repetição de código</li>
+                    <li>Processar listas, arrays e dados estruturados</li>
+                    <li>Controlar execuções repetidas</li>
+                    <li>Automatizar tarefas repetitivas</li>
+                </ul>
+
+                <div class="note-box">
+                    <strong>💡 Dica:</strong> Loops precisam SEMPRE ter uma condição de parada. Caso contrário,
+                    criam um <strong>loop infinito</strong>.
+                </div>
+
+                <h2>🔹 Loop <code>for</code></h2>
+                <p>É o loop mais comum. Usado quando sabemos exatamente quantas vezes queremos repetir algo.</p>
+
+                <div class="code-example">
+                    for (let i = 1; i <= 5; i++) {
+                        console.log("Número: " + i);
+                    }
+                </div>
+
+                <p>✔ Executa 5 vezes  
+                   ✔ Começa em 1 e vai até 5
+                </p>
+
+                <h2>🔹 Loop <code>while</code></h2>
+                <p>Usado quando NÃO sabemos o número exato de repetições, apenas enquanto uma condição for verdadeira.</p>
+
+                <div class="code-example">
+                    let numero = 1;
+
+                    while (numero <= 5) {
+                        console.log("Número: " + numero);
+                        numero++;
+                    }
+                </div>
+
+                <div class="note-box">
+                    <strong>⚠ Atenção:</strong> Certifique-se de alterar a variável dentro do loop!
+                </div>
+
+                <h2>🔹 Loop <code>do...while</code></h2>
+                <p>Executa o bloco ao menos UMA vez antes de verificar a condição.</p>
+
+                <div class="code-example">
+                    let x = 1;
+
+                    do {
+                        console.log("Valor: " + x);
+                        x++;
+                    } while (x <= 5);
+                </div>
+
+                <h2>🔹 Loop <code>for...of</code></h2>
+                <p>Usado para percorrer arrays, strings e listas.</p>
+
+                <div class="code-example">
+                    const nomes = ["Ana", "José", "Carlos"];
+
+                    for (const nome of nomes) {
+                        console.log(nome);
+                    }
+                </div>
+
+                <h2>🔹 Loop <code>for...in</code></h2>
+                <p>Usado para percorrer propriedades de objetos.</p>
+
+                <div class="code-example">
+                    const aluno = {
+                        nome: "Maria",
+                        idade: 17,
+                        curso: "Informática"
+                    };
+
+                    for (let chave in aluno) {
+                        console.log(chave + ": " + aluno[chave]);
+                    }
+                </div>
+
+                <h2>🎯 Exercício Prático</h2>
+                <div class="exercise-box">
+                    <p><strong>Desafio 1:</strong> Crie um loop que exiba apenas números pares de 0 a 20.</p>
+                    <p><strong>Desafio 2:</strong> Faça um loop que percorra um array com 5 nomes e os exiba.</p>
+                    <p><strong>Desafio 3:</strong> Use <code>while</code> para contar de 10 até 1.</p>
+                </div>
+
+                <h2>📌 Quando usar cada loop?</h2>
+                <ul>
+                    <li><strong>for</strong> → quantidade de repetições é conhecida</li>
+                    <li><strong>while</strong> → repetir enquanto uma condição for verdadeira</li>
+                    <li><strong>do...while</strong> → precisa executar ao menos uma vez</li>
+                    <li><strong>for...of</strong> → percorrer arrays e listas</li>
+                    <li><strong>for...in</strong> → percorrer objetos</li>
+                </ul>
+
+                <h2>🚀 Exemplos mais avançados</h2>
+
+                <h3>Gerar tabuada com loop</h3>
+                <div class="code-example">
+                    for (let i = 1; i <= 10; i++) {
+                        console.log("5 x " + i + " = " + (5 * i));
+                    }
+                </div>
+
+                <h3>Somar todos os valores de um array</h3>
+                <div class="code-example">
+                    const numeros = [10, 20, 30, 40];
+                    let soma = 0;
+
+                    for (const n of numeros) {
+                        soma += n;
+                    }
+
+                    console.log("Soma total:", soma);
+                </div>
+
+                <h3>Loop com condição interna (break/continue)</h3>
+                <div class="code-example">
+                    for (let i = 1; i <= 10; i++) {
+                        if (i === 5) break;   // para o loop
+                        console.log(i);
+                    }
+                </div>
+
+                <div class="code-example">
+                    for (let i = 1; i <= 10; i++) {
+                        if (i % 2 === 0) continue; // pula os pares
+                        console.log(i);
+                    }
+                </div>
+
+            </div>
+
+
+
+            <div class="next-prev">
+               <a href="curso-js5.html" class="btn-cursos">Condicionais</a>
+                <a href="curso-js7.html" class="btn-cursos">objetos</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+</body>
+
+</html>

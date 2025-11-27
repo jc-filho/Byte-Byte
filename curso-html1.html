@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-html.css">
+    <title>HTML – Introdução | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📗 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-html1.html" class="active">Introdução</a></li>
+                <li><a href="curso-html2.html">Tags Básicas</a></li>
+                <li><a href="curso-html3.html">Atributos</a></li>
+                <li><a href="curso-html4.html">Listas</a></li>
+                <li><a href="curso-html5.html">Imagens e Links</a></li>
+                <li><a href="curso-html6.html">Tabelas</a></li>
+                <li><a href="curso-html7.html">Formulários</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div id="content-area">
+                <h1>Introdução ao HTML</h1>
+
+                <p><strong>HTML</strong> significa <strong>HyperText Markup Language</strong>.
+                    Ele é a linguagem responsável por estruturar o conteúdo de um site — textos, imagens, links, vídeos,
+                    tabelas e muito mais.</p>
+
+                <h2>O que é HTML?</h2>
+                <p>HTML é uma <strong>linguagem de marcação</strong>, não uma linguagem de programação.
+                    Isso significa que o HTML serve para <strong>marcar e organizar</strong> os elementos da página.</p>
+
+                <div class="code-example">
+                    <code>
+                    &lt;html&gt;<br>
+                    &nbsp;&nbsp;&lt;head&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Meu Site&lt;/title&gt;<br>
+                    &nbsp;&nbsp;&lt;/head&gt;<br><br>
+                    &nbsp;&nbsp;&lt;body&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Bem-vindo!&lt;/h1&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Este é meu primeiro parágrafo.&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&lt;/body&gt;<br>
+                    &lt;/html&gt;
+                </div>
+                </code>
+                </div>
+
+                <h2>Como o HTML funciona?</h2>
+                <p>O HTML utiliza estruturas chamadas <strong>tags</strong>.
+                    Essas tags dizem ao navegador como exibir cada parte do conteúdo.</p>
+
+                <div class="code-example">
+                    &lt;h1&gt;Título Grande&lt;/h1&gt;<br>
+                    &lt;p&gt;Isso é um parágrafo.&lt;/p&gt;
+                </div>
+
+                <div class="note-box">
+                    <strong>💡 Dica:</strong> A maioria das tags possui abertura <code>&lt;tag&gt;</code> e fechamento
+                    <code>&lt;/tag&gt;</code>.
+                </div>
+
+                <h2>Estrutura Básica de Uma Página HTML</h2>
+                <p>Todo arquivo HTML começa com uma estrutura padrão:</p>
+
+                <div class="code-example">
+                    <code>
+                     &lt;!DOCTYPE html&gt;<br>
+                    &lt;html lang="pt-br"&gt;<br>
+                    &nbsp;&nbsp;&lt;head&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
+                    &nbsp;&nbsp;&lt;/head&gt;<br><br>
+                    &nbsp;&nbsp;&lt;body&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Olá!&lt;/h1&gt;<br>
+                    &nbsp;&nbsp;&lt;/body&gt;<br>
+                    &lt;/html&gt;
+                </code>
+                </div>
+
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li><strong>&lt;html&gt;</strong> → envolve toda a página</li>
+                    <li><strong>&lt;head&gt;</strong> → configurações, título, links</li>
+                    <li><strong>&lt;body&gt;</strong> → conteúdo visível do site</li>
+                </ul>
+
+                <h2>Exemplo de Página Completa</h2>
+                <p>Aqui está um exemplo simples de página:</p>
+
+                <div class="code-example">
+                    <code>
+                    &lt;html&gt;<br>
+                    &lt;body&gt;<br>
+                        &lt;h1&gt;Bem-vindo ao Byte&Byte!&lt;/h1&gt;<br>
+                        &lt;p&gt;Estamos aprendendo HTML do zero!v/p&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt; <br>
+                </code>
+                </div>
+
+                <div class="exercise-box">
+                    <h4>🎯 Exercício Prático</h4>
+                    <p>Crie uma página HTML com:</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Um título</li>
+                        <li>Dois parágrafos</li>
+                        <li>Seu nome em negrito</li>
+                    </ul>
+                </div>
+                <div class="next-prev">
+                    <div></div>
+                    <a href="curso-html2.html" class="btn-cursos">Tags Básicas</a>
+                </div>
+        </main>
+    </div>
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

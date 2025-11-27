@@ -1,0 +1,236 @@
+.container-cursos {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.sidebar {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.sidebar h3 {
+    color: #2C3E50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid#F7DF1E;
+    padding-bottom: 0.5rem;
+    font-size: 30px;
+
+}
+
+.sidebar ul {
+    color: #2C3E50;
+    list-style: none;
+}
+
+.sidebar li {
+    color: #2C3E50;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+    color: #555;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color:#F7DF1E;
+    color: black;
+}
+
+.main-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.breadcrumb {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: #F7DF1E;
+    text-decoration: none;
+}
+
+.main-content h1 {
+    color: #2C3E50;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.main-content h3 {
+    font-size: 25PX;
+    color: #2C3E50;
+}
+
+.main-content P {
+    color: #2C3E50;
+}
+
+h2 {
+    color: #2C3E50;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.8rem;
+    border-left: 4px solid#F7DF1E;
+    padding-left: 1rem;
+}
+
+.intro-box {
+    background: linear-gradient(135deg, #74B9FF, #0984E3);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.intro-box h2 {
+    border: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.code-example {
+    background-color: #2D3748;
+    color: #E2E8F0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    position: relative;
+}
+
+.code-example::before {
+    content: "Exemplo";
+    position: absolute;
+    top: -10px;
+    left: 1rem;
+    background: #F7DF1E;
+    color: black;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.try-it-btn {
+    background: #27AE60;
+    color: #000000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem 0;
+    transition: background 0.3s;
+}
+
+.try-it-btn:hover {
+    background: #229954;
+}
+
+.note-box {
+    background: #FFF3CD;
+    border: 1px solid #FFEAA7;
+    border-left: 4px solid #FDCB6E;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.note-box strong {
+    color: #D68910;
+}
+
+.exercise-box {
+    background: #E8F5E8;
+    border: 1px solid #C3E6C3;
+    border-left: 4px solid #27AE60;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.exercise-box h4 {
+    color: #27AE60;
+    margin-bottom: 0.5rem;
+}
+
+.next-prev {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #EEE;
+}
+
+.next-prev a {
+    background: #F7DF1E;
+    color: #000000;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.next-prev a:hover {
+    background: #F7DF1E;
+}
+
+.interactive-console {
+    background: #1A1A1A;
+    color: #00FF00;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: "Courier New", monospace;
+    margin: 1rem 0;
+    min-height: 100px;
+    border: 2px solid #333;
+}
+
+.interactive-console input {
+    background: transparent;
+    border: none;
+    color: #00FF00;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+}
+
+.btn-cursos:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .container-cursos {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}

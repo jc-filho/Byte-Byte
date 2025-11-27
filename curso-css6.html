@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-css.css">
+    <title>CSS | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>🎨 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-css1.html">Introdução</a></li>
+                <li><a href="curso-css2.html">Seletores e Propriedades</a></li>
+                <li><a href="curso-css3.html">Cores e Unidades</a></li>
+                <li><a href="curso-css4.html" >Box Model</a></li>
+                <li><a href="curso-css5.html">Display e Layout</a></li>
+                <li><a href="curso-css6.html"class="active">Flexbox</a></li>
+                <li><a href="curso-css7.html">Grid Layout</a></li>
+                <li><a href="curso-css8.html">Responsividade</a></li>
+            </ul>
+        </aside>
+<main class="main-content">
+
+        <h1>Flexbox — Layout Moderno e Flexível</h1>
+
+        <p>O <strong>Flexbox</strong> é um modelo de layout moderno do CSS que facilita o posicionamento,
+            alinhamento e distribuição dos elementos dentro de containers, mesmo quando seus tamanhos são diferentes.</p>
+
+        <div class="code-example">
+.container {  
+    display: flex;  
+}
+.item {  
+    background: #e67e22;  
+    padding: 20px;  
+    margin: 5px;  
+}
+        </div>
+
+        <h2>➡️ 1. Ativando o Flexbox</h2>
+        <p>Para usar Flexbox, basta aplicar <code>display: flex;</code> no container.</p>
+
+        <div class="code-example">
+.container {
+    display: flex;
+}
+        </div>
+
+        <h2>➡️ 2. Direção dos Itens (flex-direction)</h2>
+        <p>Controla a direção dos itens dentro do container.</p>
+
+        <ul>
+            <li><strong>row:</strong> lado a lado (padrão)</li>
+            <li><strong>column:</strong> um embaixo do outro</li>
+            <li><strong>row-reverse:</strong> lado a lado invertido</li>
+            <li><strong>column-reverse:</strong> coluna invertida</li>
+        </ul>
+
+        <div class="code-example">
+.container {
+    display: flex;
+    flex-direction: row;
+}
+        </div>
+
+        <h2>➡️ 3. Alinhamento Horizontal (justify-content)</h2>
+        <p>Distribui os elementos ao longo do eixo principal.</p>
+
+        <ul>
+            <li><strong>flex-start</strong> (início)</li>
+            <li><strong>center</strong> (centro)</li>
+            <li><strong>flex-end</strong> (final)</li>
+            <li><strong>space-between</strong> (espaço entre)</li>
+            <li><strong>space-around</strong></li>
+            <li><strong>space-evenly</strong></li>
+        </ul>
+
+        <div class="code-example">
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+        </div>
+
+        <h2>➡️ 4. Alinhamento Vertical (align-items)</h2>
+
+        <ul>
+            <li><strong>stretch</strong> (padrão)</li>
+            <li><strong>center</strong></li>
+            <li><strong>flex-start</strong></li>
+            <li><strong>flex-end</strong></li>
+            <li><strong>baseline</strong></li>
+        </ul>
+
+        <div class="code-example">
+.container {
+    display: flex;
+    align-items: center;
+}
+        </div>
+
+        <h2>➡️ 5. Quebra de Linha (flex-wrap)</h2>
+        <p>Permite que os itens “quebrem” para a próxima linha quando não houver espaço.</p>
+
+        <div class="code-example">
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+        </div>
+
+        <h2>➡️ 6. Controle Individual de Itens</h2>
+
+        <h3>✓ flex-grow</h3>
+        <p>Define quanto o item cresce.</p>
+
+        <div class="code-example">
+.item {
+    flex-grow: 1;
+}
+        </div>
+
+        <h3>✓ flex-shrink</h3>
+        <p>Define quanto o item encolhe.</p>
+
+        <h3>✓ flex-basis</h3>
+        <p>Define o tamanho inicial do item.</p>
+
+        <div class="code-example">
+.item {
+    flex: 1 1 200px;
+}
+        </div>
+
+        <h2>➡️ 7. Atalho Flex</h2>
+
+        <div class="code-example">
+.item {
+    flex: 1;     /* grow */
+    /* ou */
+    flex: 1 1 250px; 
+}
+        </div>
+
+        <h2>📌 Exemplo Completo de Layout com Flexbox</h2>
+
+        <div class="code-example">
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f39c12;
+    padding: 20px;
+}
+
+.item {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    width: 30%;
+}
+        </div>
+
+        <p>Esse exemplo é ideal para criar seções, grids simples, cards e layouts modernos.</p>
+
+        <div class="exercise-box">
+            <h4>🎯 DESAFIO</h4>
+            <p>Crie um layout com 3 blocos que se reorganizam quando a tela for menor.</p>
+        </div>
+
+
+            <div class="next-prev">
+                <a href="curso-css5.html" class="btn-cursos">Display e Layout</a>
+                <a href="curso-css7.html" class="btn-cursos">Grid Layout</a>
+            </div>
+
+        </main>
+    </div>
+
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

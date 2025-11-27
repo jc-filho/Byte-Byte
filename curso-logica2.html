@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-logica.css">
+    <title>Lógica de Programação | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88;  padding-bottom: 30px">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Pratica</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+            </section>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-logica1.html" onclick="loadContent('intro')">Introdução</a></li>
+                <li><a href="curso-logica2.html" class="active" onclick="loadContent('algorithms')">Algoritmos</a></li>
+                <li><a href="curso-logica3.html" onclick="loadContent('variables')">Variáveis</a></li>
+                <li><a href="curso-logica4.html" onclick="loadContent('conditions')">Condições</a></li>
+                <li><a href="curso-logica5.html" onclick="loadContent('loops')">Laços</a></li>
+                <li><a href="curso-logica6.html" onclick="loadContent('functions')">Funções</a></li>
+                <li><a href="curso-logica7.html" onclick="loadContent('arrays')">Arrays</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="intro-box">
+                <h2>📜 Vamos aprender sobre Algoritmos!</h2>
+                <p>
+                    Um algoritmo é uma sequência de passos bem definidos que resolvem um
+                    problema. É a base da lógica de programação!
+                </p>
+            </div>
+
+            <h1>O que é um Algoritmo?</h1>
+            <p>
+                Um <strong>algoritmo</strong> é um conjunto finito de instruções que,
+                quando executadas em ordem, resolvem um problema ou realizam uma
+                tarefa.
+            </p>
+
+            <div class="note-box">
+                <strong>💡 Pense assim:</strong> Um algoritmo é como uma receita de
+                bolo. Se você seguir todos os passos corretamente, vai ter o resultado
+                esperado!
+            </div>
+
+            <h2>Características de um Bom Algoritmo</h2>
+            <ul style="margin-left: 2rem; margin-top: 1rem">
+                <li><strong>Clareza:</strong> deve ser fácil de entender</li>
+                <li><strong>Precisão:</strong> cada passo é bem definido</li>
+                <li><strong>Eficiência:</strong> deve ser o mais simples possível</li>
+                <li>
+                    <strong>Finitude:</strong> sempre termina após um número finito de
+                    passos
+                </li>
+            </ul>
+
+            <h2>Exemplo do Dia a Dia</h2>
+            <p>Exemplo de algoritmo para escovar os dentes:</p>
+            <div class="code-example">
+                1. Pegar a escova 2. Colocar pasta de dente 3. Escovar os dentes por 2
+                minutos 4. Enxaguar a boca 5. Guardar a escova
+            </div>
+
+            <h2>Formas de Representar Algoritmos</h2>
+
+            <h3>1. Linguagem Natural</h3>
+            <p>Usa frases do dia a dia para descrever os passos:</p>
+            <div class="code-example">
+                Algoritmo para trocar uma lâmpada: 1. Desligar o interruptor 2. Pegar
+                uma escada 3. Subir na escada 4. Desenroscar a lâmpada queimada 5.
+                Colocar a nova lâmpada 6. Descer da escada 7. Ligar o interruptor
+            </div>
+
+            <h3>2. Pseudocódigo</h3>
+            <p>Uma forma próxima de código, mas ainda fácil de entender:</p>
+            <div class="code-example">
+                ALGORITMO "Calcular Média" INÍCIO ESCREVER "Digite a primeira nota: "
+                LER nota1 ESCREVER "Digite a segunda nota: " LER nota2 media <- (nota1 + nota2) / 2 SE media>= 7 ENTÃO
+                    ESCREVER "Aprovado! Média: ", media
+                    SENÃO ESCREVER "Reprovado! Média: ", media FIM SE FIM
+            </div>
+
+            <h3>3. Fluxograma</h3>
+            <p>
+                Representa o algoritmo de forma visual com símbolos e setas (iremos
+                ver mais sobre isso em outra aula!).
+            </p>
+
+            <div class="exercise-box">
+                <h4>🎯 Exercício Prático</h4>
+                <p>
+                    Escreva um algoritmo em linguagem natural para preparar um café.
+                    Liste os passos em ordem lógica.
+                </p>
+            </div>
+
+            <div class="next-prev">
+                <a href="curso-logica1.html" class="btn-cursos">Introdução</a>
+                <a href="curso-logica3.html" class="btn-cursos">Variáveis</a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

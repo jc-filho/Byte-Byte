@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-js.css">
+    <title> JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!---- HEADER ---->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!---- FIM HEADER ---->
+
+    <div class="container-cursos">
+
+        <!---- MENU LATERAL ---->
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html" class="active">Introdução</a></li>
+                <li><a href="curso-js2.html">Variáveis</a></li>
+                <li><a href="curso-js3.html">Operadores</a></li>
+                <li><a href="curso-js4.html">Funções</a></li>
+                <li><a href="curso-js5.html">Condicionais</a></li>
+                <li><a href="curso-js6.html">Loops</a></li>
+                <li><a href="curso-js7.html">Objetos</a></li>
+                <li><a href="curso-js8.html">Arrays</a></li>
+                <li><a href="curso-js9.html">DOM</a></li>
+            </ul>
+        </aside>
+
+        <!---- CONTEÚDO PRINCIPAL ---->
+        <main class="main-content">
+
+            <h1>Introdução ao JavaScript</h1>
+
+            <p>
+                O <strong>JavaScript</strong> é a linguagem responsável por trazer vida às páginas web.
+                Com ele, você pode interagir com o conteúdo da página, criar animações, validar formulários,
+                conectar-se com servidores e muito mais.
+            </p>
+
+            <h2>O que é JavaScript?</h2>
+            <p>
+                JavaScript é uma linguagem de programação interpretada, leve e muito poderosa.
+                É executada diretamente no navegador, permitindo controlar praticamente tudo dentro da página.
+            </p>
+
+            <div class="code-example">
+                console.log("Olá, mundo!");
+                alert("Seja bem-vindo ao JavaScript!");
+            </div>
+
+            <h2>Para que serve o JavaScript?</h2>
+            <ul style="margin-left: 2rem;">
+                <li>Criar interatividade em sites</li>
+                <li>Manipular textos, imagens e elementos HTML</li>
+                <li>Validar formulários antes de enviar</li>
+                <li>Criar animações e efeitos visuais</li>
+                <li>Comunicar-se com servidores (APIs)</li>
+                <li>Construir jogos, sistemas e aplicações completas</li>
+            </ul>
+
+            <h2>Primeiro Contato com o Console</h2>
+            <p>
+                O console é a forma mais fácil de testar comandos de JavaScript.
+                Ele fica dentro das Ferramentas do Desenvolvedor do navegador.
+            </p>
+
+            <div class="code-example">
+                console.log("Teste no console!");
+            </div>
+
+            <h2>Como adicionar JavaScript na página?</h2>
+
+            <h3>1. Código direto no HTML</h3>
+            <div class="code-example">
+                &lt;script&gt;<br>
+                &nbsp;&nbsp;alert("Rodando dentro do HTML!");<br>
+                &lt;/script&gt;
+            </div>
+
+            <h3>2. Arquivo externo</h3>
+            <div class="code-example">
+                &lt;script src="js/script.js"&gt;&lt;/script&gt;
+            </div>
+
+            <h3>3. Manipulando o DOM</h3>
+            <p>Com JavaScript, você pode mudar elementos HTML dinamicamente:</p>
+
+            <div class="code-example">
+                document.getElementById("titulo").innerText = "Novo título alterado via JS!";
+            </div>
+
+            <h2>Eventos</h2>
+            <p>
+                Eventos são ações realizadas pelo usuário, como clicar, digitar ou passar o mouse.
+            </p>
+
+            <div class="code-example">
+                function clicar() {<br>
+                &nbsp;&nbsp;alert("Você clicou no botão!");<br>
+                }<br><br>
+
+                &lt;button onclick="clicar()"&gt;Clique aqui&lt;/button&gt;
+            </div>
+
+            <h2>Tipos de Dados</h2>
+            <ul style="margin-left: 2rem;">
+                <li><strong>number:</strong> números (10, 3.14)</li>
+                <li><strong>string:</strong> textos ("Olá")</li>
+                <li><strong>boolean:</strong> verdadeiro / falso</li>
+                <li><strong>array:</strong> lista de valores</li>
+                <li><strong>object:</strong> coleções mais complexas</li>
+            </ul>
+
+            <h2>Exemplo Completo</h2>
+            <div class="code-example">
+                const nome = prompt("Digite seu nome:");<br>
+                alert("Olá, " + nome + "!");<br><br>
+
+                if (nome.length > 5) {<br>
+                &nbsp;&nbsp;console.log("Nome grande!");<br>
+                } else {<br>
+                &nbsp;&nbsp;console.log("Nome pequeno!");<br>
+                }
+            </div>
+
+            <div class="exercise-box">
+                <h4>🎯 Exercício Prático</h4>
+                <p>Crie um script que peça dois números e mostre a soma entre eles.</p>
+            </div>
+
+            <div class="next-prev">
+                <div></div>
+                <a href="curso-js2.html" class="btn-cursos">Variáveis</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-js.css">
+    <title> JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!---- HEADER ---->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!---- FIM HEADER ---->
+
+    <div class="container-cursos">
+
+        <!---- MENU LATERAL ---->
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html">Introdução</a></li>
+                <li><a href="curso-js2.html">Variáveis</a></li>
+                <li><a href="curso-js3.html">Operadores</a></li>
+                <li><a href="curso-js4.html">Funções</a></li>
+                <li><a href="curso-js5.html">Condicionais</a></li>
+                <li><a href="curso-js6.html">Loops</a></li>
+                <li><a href="curso-js7.html">Objetos</a></li>
+                <li><a href="curso-js8.html" >Arrays</a></li>
+                <li><a href="curso-js9.html"class="active">DOM</a></li>
+            </ul>
+        </aside>
+
+        <!---- CONTEÚDO PRINCIPAL ---->
+        <main class="main-content">
+
+            <h1>DOM – Document Object Model</h1>
+            <p>O <strong>DOM (Document Object Model)</strong> é a forma como o JavaScript interage com a página HTML. Ele transforma cada tag em um objeto que pode ser acessado, modificado, criado ou removido.</p>
+
+            <h2>📌 O Que é o DOM?</h2>
+            <p>Quando o navegador carrega uma página, ele cria uma estrutura em forma de árvore contendo todos os elementos. Exemplo:</p>
+
+            <div class="code-example">
+                HTML
+                └── BODY
+                    ├── H1
+                    ├── P
+                    └── BUTTON
+            </div>
+
+            <p>O JavaScript consegue acessar cada uma dessas partes para modificar a página dinamicamente.</p>
+
+            <h2>📍 Selecionando Elementos</h2>
+            <p>Para manipular elementos, primeiro precisamos selecioná-los.</p>
+
+            <h3>🔸 getElementById()</h3>
+
+            <div class="code-example">
+                const titulo = document.getElementById("meuTitulo");
+                console.log(titulo);
+            </div>
+
+            <h3>🔸 getElementsByClassName()</h3>
+
+            <div class="code-example">
+                const itens = document.getElementsByClassName("item");
+            </div>
+
+            <h3>🔸 querySelector()</h3>
+            <p>O mais usado atualmente:</p>
+
+            <div class="code-example">
+                const botao = document.querySelector("#btn");
+            </div>
+
+            <h3>🔸 querySelectorAll()</h3>
+
+            <div class="code-example">
+                const paragrafos = document.querySelectorAll("p");
+            </div>
+
+            <h2>✏️ Alterando Conteúdo</h2>
+
+            <h3>🔸 innerHTML</h3>
+            <div class="code-example">
+                document.getElementById("demo").innerHTML = "Novo texto!";
+            </div>
+
+            <h3>🔸 textContent</h3>
+            <div class="code-example">
+                titulo.textContent = "Texto atualizado!";
+            </div>
+
+            <h2>🎨 Alterando Estilos</h2>
+
+            <div class="code-example">
+                const box = document.querySelector(".caixa");
+                box.style.backgroundColor = "orange";
+                box.style.fontSize = "20px";
+            </div>
+
+            <h2>✨ Manipulando Atributos</h2>
+
+            <div class="code-example">
+                const img = document.querySelector("img");
+                img.setAttribute("src", "nova-imagem.png");
+            </div>
+
+            <h2>🧩 Criando Elementos</h2>
+
+            <div class="code-example">
+                const novoItem = document.createElement("li");
+                novoItem.textContent = "Item criado via JS!";
+                document.querySelector("ul").appendChild(novoItem);
+            </div>
+
+            <h2>❌ Removendo Elementos</h2>
+
+            <div class="code-example">
+                const titulo = document.querySelector("h1");
+                titulo.remove();
+            </div>
+
+            <h2>🎯 Eventos – Interatividade</h2>
+            <p>Eventos permitem detectar ações do usuário.</p>
+
+            <h3>🔸 Evento de clique</h3>
+
+            <div class="code-example">
+                document.getElementById("btn").onclick = function () {
+                    alert("Você clicou!");
+                }
+            </div>
+
+            <h3>🔸 Evento moderno addEventListener()</h3>
+
+            <div class="code-example">
+                const botao = document.querySelector("#btn");
+                botao.addEventListener("click", () => {
+                    console.log("Clicado!");
+                });
+            </div>
+
+            <h2>⭐ Exemplo Prático Completo</h2>
+
+            <div class="code-example">
+                <button id="trocar">Trocar cor</button>
+
+                const box = document.querySelector(".box");
+                const trocar = document.getElementById("trocar");
+
+                trocar.addEventListener("click", () => {
+                    box.style.background = "orange";
+                    box.textContent = "Cor trocada!";
+                });
+            </div>
+
+            <div class="exercise-box">
+                <h4>📝 Exercício</h4>
+                <p>Crie um botão que ao clicar:</p>
+                <ul>
+                    <li>Mude o texto de um parágrafo</li>
+                    <li>Aumente o tamanho da fonte</li>
+                    <li>Troque a cor de fundo</li>
+                    <li>Oculte um outro elemento</li>
+                </ul>
+            </div>
+
+                    <div class="next-prev">
+                        <a href="curso-js8.html" class="btn-cursos">Arrays</a>
+                        <a href="pratica.html" class="btn-cursos">Venha pratica</a>
+                    </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+</body>
+
+</html>

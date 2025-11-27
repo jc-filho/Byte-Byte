@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-js.css">
+    <title> JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!---- HEADER ---->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!---- FIM HEADER ---->
+
+    <div class="container-cursos">
+
+        <!---- MENU LATERAL ---->
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html" >Introdução</a></li>
+                <li><a href="curso-js2.html"class="active">Variáveis</a></li>
+                <li><a href="curso-js3.html">Operadores</a></li>
+                <li><a href="curso-js4.html">Funções</a></li>
+                <li><a href="curso-js5.html">Condicionais</a></li>
+                <li><a href="curso-js6.html">Loops</a></li>
+                <li><a href="curso-js7.html">Objetos</a></li>
+                <li><a href="curso-js8.html">Arrays</a></li>
+                <li><a href="curso-js9.html">DOM</a></li>
+            </ul>
+        </aside>
+
+        <!---- CONTEÚDO PRINCIPAL ---->
+               <main class="main-content">
+            <h1>Variáveis em JavaScript</h1>
+
+            <p>As <strong>variáveis</strong> são espaços na memória usados para guardar valores.  
+               Elas são essenciais em qualquer linguagem de programação e no JavaScript não é diferente.</p>
+
+            <h2>Como Criar Variáveis</h2>
+
+            <p>No JavaScript moderno, usamos três palavras-chave:</p>
+
+            <ul style="margin-left:20px;">
+                <li><strong>var</strong> – mais antiga (evite)</li>
+                <li><strong>let</strong> – a mais usada</li>
+                <li><strong>const</strong> – usada para valores que não mudam</li>
+            </ul>
+
+            <div class="code-example">
+                let nome = "José";  
+                var idade = 17;  
+                const escola = "Abel Freire Coelho";
+            </div>
+
+            <div class="note-box">
+                <strong>💡 Dica:</strong> Sempre prefira <strong>let</strong> e <strong>const</strong>.  
+                A palavra <strong>var</strong> pode causar erros difíceis de identificar.
+            </div>
+
+            <h2>Regras de Nomeação</h2>
+            <ul style="margin-left:20px;">
+                <li>Não pode começar com número</li>
+                <li>Não pode conter espaços</li>
+                <li>Use camelCase → <strong>minhaVariavel</strong></li>
+                <li>Nomes devem ser claros e fáceis de entender</li>
+            </ul>
+
+            <div class="code-example">
+                // Certo
+                let precoProduto = 25;
+                let nomeAluno = "Maria";
+
+                // Errado
+                let 2carro = "Fiat";
+                let nome aluno = "José";
+            </div>
+
+            <h2>Alterando Valores</h2>
+            <p>Variáveis criadas com <strong>let</strong> podem ser alteradas.</p>
+
+            <div class="code-example">
+                let contador = 1;
+                contador = 2;
+            </div>
+
+            <div class="note-box">
+                <strong>❗ Importante:</strong> Variáveis criadas com <strong>const</strong> NÃO podem ser alteradas.
+            </div>
+
+            <div class="code-example">
+                const cidade = "Mossoró";
+                cidade = "Natal"; // ❌ ERRO!
+            </div>
+
+            <h2>Tipos de Valores Que Você Pode Guardar</h2>
+
+            <ul style="margin-left:20px;">
+                <li>Números</li>
+                <li>Textos (strings)</li>
+                <li>Booleanos (true/false)</li>
+                <li>Arrays</li>
+                <li>Objetos</li>
+            </ul>
+
+            <div class="code-example">
+                let idade = 17;  
+                let nome = "Clementino";  
+                let aprovado = true;  
+                let notas = [8, 9, 10];
+            </div>
+
+            <h2>Escopo de Variáveis</h2>
+
+            <p>O escopo define onde a variável pode ser usada no código.</p>
+
+            <div class="code-example">
+                let a = 10; // escopo global
+
+                if (true) {
+                    let b = 20; // escopo local
+                }
+
+                console.log(a); // funciona
+                console.log(b); // ERRO
+            </div>
+
+            <div class="exercise-box">
+                <h4>🎯 Exercício Prático</h4>
+                <p>Crie um programa que:</p>
+                <ul style="margin-left:20px;">
+                    <li>Crie uma variável chamada <strong>nome</strong></li>
+                    <li>Crie outra chamada <strong>idade</strong></li>
+                    <li>Exiba na tela: "Olá, meu nome é ___ e eu tenho ___ anos"</li>
+                </ul>
+            </div>
+
+
+            <div class="next-prev">
+               <a href="curso-js1.html" class="btn-cursos">Introdução</a>
+                <a href="curso-js3.html" class="btn-cursos">Operadores</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+</body>
+
+</html>

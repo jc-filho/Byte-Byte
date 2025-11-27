@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-js.css">
+    <title> JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!---- HEADER ---->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!---- FIM HEADER ---->
+
+    <div class="container-cursos">
+
+        <!---- MENU LATERAL ---->
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html">Introdução</a></li>
+                <li><a href="curso-js2.html">Variáveis</a></li>
+                <li><a href="curso-js3.html">Operadores</a></li>
+                <li><a href="curso-js4.html">Funções</a></li>
+                <li><a href="curso-js5.html">Condicionais</a></li>
+                <li><a href="curso-js6.html">Loops</a></li>
+                <li><a href="curso-js7.html">Objetos</a></li>
+                <li><a href="curso-js8.html" class="active">Arrays</a></li>
+                <li><a href="curso-js9.html">DOM</a></li>
+            </ul>
+        </aside>
+
+        <!---- CONTEÚDO PRINCIPAL ---->
+        <main class="main-content">
+
+            <h1>Arrays em JavaScript</h1>
+
+            <p>Arrays são estruturas de dados fundamentais em JavaScript que permitem armazenar múltiplos valores em uma
+                única variável. Eles são extremamente úteis para organizar listas, grupos de elementos e coleções de
+                dados.</p>
+
+            <h2>O que é um Array?</h2>
+            <p>Um array é uma lista ordenada e indexada de valores. Cada valor pode ser acessado usando sua posição
+                (índice), que começa em 0.</p>
+
+            <div class="code-example">
+                const frutas = ["Maçã", "Banana", "Laranja"];
+                console.log(frutas[0]); // Saída: Maçã
+            </div>
+
+            <h2>Como Criar Arrays</h2>
+
+            <h3>1. Usando colchetes (forma mais usada):</h3>
+            <div class="code-example">
+                let numeros = [10, 20, 30, 40];
+            </div>
+
+            <h3>2. Usando o construtor Array:</h3>
+            <div class="code-example">
+                let nomes = new Array("Ana", "João", "Marcos");
+            </div>
+
+            <h2>Acessando Elementos</h2>
+            <p>Use o índice para acessar valores dentro do array:</p>
+
+            <div class="code-example">
+                let cores = ["Vermelho", "Verde", "Azul"];
+                console.log(cores[1]); // Verde
+            </div>
+
+            <div class="note-box">
+                <strong>💡 Dica:</strong> O primeiro elemento sempre é índice <strong>0</strong>.
+            </div>
+
+            <h2>Alterando Valores</h2>
+            <div class="code-example">
+                let animais = ["Cachorro", "Gato", "Pássaro"];
+                animais[1] = "Leão";
+                console.log(animais);
+                // ["Cachorro", "Leão", "Pássaro"]
+            </div>
+
+            <h2>Tamanho do Array</h2>
+            <p>Use <strong>.length</strong> para saber quantos elementos existem:</p>
+
+            <div class="code-example">
+                let itens = ["Mesa", "Cadeira", "Sofá"];
+                console.log(itens.length); // 3
+            </div>
+
+            <h2>Métodos Essenciais de Arrays</h2>
+
+            <h3>1. push() – adiciona no final:</h3>
+            <div class="code-example">
+                let lista = ["A", "B"];
+                lista.push("C");
+                console.log(lista); // ["A", "B", "C"]
+            </div>
+
+            <h3>2. pop() – remove o último item:</h3>
+            <div class="code-example">
+                lista.pop();
+                console.log(lista); // ["A", "B"]
+            </div>
+
+            <h3>3. unshift() – adiciona no início:</h3>
+            <div class="code-example">
+                lista.unshift("Z");
+                console.log(lista); // ["Z", "A", "B"]
+            </div>
+
+            <h3>4. shift() – remove o primeiro item:</h3>
+            <div class="code-example">
+                lista.shift();
+                console.log(lista); // ["A", "B"]
+            </div>
+
+            <h3>5. indexOf() – encontra a posição:</h3>
+            <div class="code-example">
+                let frutas = ["Maçã", "Pera", "Uva"];
+                console.log(frutas.indexOf("Pera")); // 1
+            </div>
+
+            <h3>6. includes() – verifica se existe:</h3>
+            <div class="code-example">
+                console.log(frutas.includes("Uva")); // true
+            </div>
+
+            <h3>7. join() – transforma em string:</h3>
+            <div class="code-example">
+                console.log(frutas.join(" - "));
+                // Maçã - Pera - Uva
+            </div>
+
+            <h3>8. slice() – copia parte do array:</h3>
+            <div class="code-example">
+                let numeros = [1,2,3,4,5];
+                console.log(numeros.slice(1, 4)); // [2,3,4]
+            </div>
+
+            <h3>9. splice() – remove e adiciona:</h3>
+            <div class="code-example">
+                let letras = ["A","B","C","D"];
+                letras.splice(1, 2);
+                console.log(letras); // ["A", "D"]
+            </div>
+
+            <h2>Percorrendo Arrays</h2>
+
+            <h3>1. for tradicional</h3>
+            <div class="code-example">
+                for (let i = 0; i < frutas.length; i++) { console.log(frutas[i]); } </div>
+
+                    <h3>2. for...of</h3>
+                    <div class="code-example">
+                        for (let item of frutas) {
+                        console.log(item);
+                        }
+                    </div>
+
+                    <h3>3. forEach()</h3>
+                    <div class="code-example">
+                        frutas.forEach(f => console.log(f));
+                    </div>
+
+                    <h2>Arrays Multidimensionais</h2>
+                    <p>Um array dentro de outro array:</p>
+
+                    <div class="code-example">
+                        let matriz = [
+                        [1, 2, 3],
+                        [4, 5, 6],
+                        [7, 8, 9]
+                        ];
+                        console.log(matriz[1][2]); // 6
+                    </div>
+
+                    <h2>Exercício Prático</h2>
+
+                    <div class="exercise-box">
+                        <h4>🎯 Desafio</h4>
+                        <p>Crie um array com 5 números e exiba:</p>
+                        <ul>
+                            <li>O maior número</li>
+                            <li>O menor número</li>
+                            <li>A soma de todos</li>
+                            <li>A média dos valores</li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="next-prev">
+                        <a href="curso-js7.html" class="btn-cursos">Objetos</a>
+                        <a href="curso-js9.html" class="btn-cursos">DOM</a>
+                    </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+</body>
+
+</html>

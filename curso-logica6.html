@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-logica.css">
+    <title>Lógica de Programação | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88;  padding-bottom: 30px">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Pratica</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+            </section>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-logica1.html" onclick="loadContent('intro')">Introdução</a></li>
+                <li><a href="curso-logica2.html" onclick="loadContent('algorithms')">Algoritmos</a></li>
+                <li><a href="curso-logica3.html" onclick="loadContent('variables')">Variáveis</a></li>
+                <li><a href="curso-logica4.html" onclick="loadContent('conditions')">Condições</a></li>
+                <li><a href="curso-logica5.html" onclick="loadContent('loops')">Laços</a></li>
+                <li><a href="curso-logica6.html" class="active" onclick="loadContent('functions')">Funções</a></li>
+                <li><a href="curso-logica7.html" onclick="loadContent('arrays')">Arrays</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+
+            <div class="intro-box">
+                <h2>🛠️ Funções e Procedimentos</h2>
+                <p>Organize e reutilize blocos de código com funções.</p>
+            </div>
+
+            <h1>Funções e Procedimentos</h1>
+            <p>As <strong>funções</strong> permitem agrupar instruções para reutilizá-las em várias partes do programa.
+            </p>
+
+            <h2>Procedimentos</h2>
+            <p>Executam uma ação mas não retornam valor:</p>
+            <div class="code-example">
+                PROCEDIMENTO exibirMensagem(nome)
+                INÍCIO
+                ESCREVER "Olá, ", nome, "!"
+                ESCREVER "Bem-vindo ao sistema!"
+                FIM
+
+                ALGORITMO "Principal"
+                INÍCIO
+                exibirMensagem("João")
+                exibirMensagem("Maria")
+                FIM
+            </div>
+
+            <h2>Funções</h2>
+            <p>Executam cálculos e retornam um valor:</p>
+            <div class="code-example">
+                FUNÇÃO calcularArea(largura, altura)
+                INÍCIO
+                area = largura * altura
+                RETORNAR area
+                FIM
+
+                ALGORITMO "Principal"
+                INÍCIO
+                ESCREVER "Digite a largura: "
+                LER l
+                ESCREVER "Digite a altura: "
+                LER h
+
+                resultado = calcularArea(l, h)
+                ESCREVER "A área é: ", resultado
+                FIM
+            </div>
+
+            <h2>Vantagens</h2>
+            <ul style="margin-left: 2rem;">
+                <li>✅ Reutilização de código</li>
+                <li>✅ Organização do programa</li>
+                <li>✅ Facilidade de manutenção</li>
+            </ul>
+
+            <div class="exercise-box">
+                <h4>🎯 Exercício</h4>
+                <p>Crie uma função que receba três números e retorne a média deles.</p>
+            </div>
+
+            <div class="next-prev">
+                <a href="curso-logica5.html" class="btn-cursos">laços</a>
+                <a href="curso-logica7.html" class="btn-cursos">Arrays</a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

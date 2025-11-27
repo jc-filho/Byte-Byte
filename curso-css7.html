@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-css.css">
+    <title>CSS | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>🎨 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-css1.html">Introdução</a></li>
+                <li><a href="curso-css2.html">Seletores e Propriedades</a></li>
+                <li><a href="curso-css3.html">Cores e Unidades</a></li>
+                <li><a href="curso-css4.html" >Box Model</a></li>
+                <li><a href="curso-css5.html">Display e Layout</a></li>
+                <li><a href="curso-css6.html">Flexbox</a></li>
+                <li><a href="curso-css7.html"class="active">Grid Layout</a></li>
+                <li><a href="curso-css8.html">Responsividade</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+        <div id="content-area">
+
+            <h1>CSS Grid Layout</h1>
+
+            <p>
+                O <strong>CSS Grid Layout</strong> é um dos sistemas mais poderosos do CSS
+                para criar layouts modernos, organizados e totalmente responsivos.
+                Diferente do Flexbox — que organiza elementos em linha — o Grid permite
+                trabalhar com <strong>duas dimensões: linhas e colunas</strong>.
+            </p>
+
+            <h2>O que é o CSS Grid?</h2>
+            <p>
+                O Grid funciona como uma espécie de “grade” onde os elementos podem ser posicionados
+                de forma precisa. É ideal quando você precisa de:
+            </p>
+
+            <ul style="margin-left: 2rem;">
+                <li>Layouts de sites completos</li>
+                <li>Áreas complexas de conteúdo</li>
+                <li>Estruturas responsivas controladas</li>
+                <li>Divisão horizontal + vertical ao mesmo tempo</li>
+            </ul>
+
+            <div class="code-example">
+grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 20px;
+}
+
+grid-item {
+    background: orange;
+    padding: 20px;
+    color: white;
+}
+            </div>
+
+            <h2>Criando um Grid</h2>
+            <p>
+                Para iniciar um grid, basta aplicar a propriedade
+                <strong>display: grid;</strong> ao elemento pai.
+            </p>
+
+            <div class="code-example">
+.container {
+    display: grid;
+}
+            </div>
+
+            <h3>Definindo Colunas com grid-template-columns</h3>
+            <p>Você pode definir quantas colunas quiser e seus tamanhos:</p>
+
+            <div class="code-example">
+.container {
+    display: grid;
+    grid-template-columns: 100px 200px 300px;
+}
+            </div>
+
+            <p>Também pode usar a unidade <strong>fr</strong> (fração da tela):</p>
+
+            <div class="code-example">
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+            </div>
+
+            <h3>Definindo Linhas</h3>
+
+            <div class="code-example">
+.container {
+    display: grid;
+    grid-template-rows: 150px 250px 150px;
+}
+            </div>
+
+            <h2>Espaçamento — gap</h2>
+            <p>Muito mais simples que margin:</p>
+
+            <div class="code-example">
+.container {
+    display: grid;
+    gap: 20px;
+}
+            </div>
+
+            <h2>Grid Responsivo com repeat()</h2>
+
+            <div class="code-example">
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+            </div>
+
+            <h3>Grid Automático com auto-fit e minmax()</h3>
+
+            <p>Essa combinação cria um grid totalmente responsivo:</p>
+
+            <div class="code-example">
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+            </div>
+
+            <h2>Posicionando Itens</h2>
+
+            <p>Você pode controlar onde cada item fica:</p>
+
+            <div class="code-example">
+.item1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+            </div>
+
+            <h2>Grid Áreas — Nomeando Regiões</h2>
+
+            <div class="code-example">
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    grid-template-columns: 200px 1fr;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.content { grid-area: content; }
+.footer { grid-area: footer; }
+            </div>
+
+            <h2>Quando usar CSS Grid?</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <div style="background:#ffe0b2; padding:1rem; border-radius:8px; text-align:center;">
+                    <h3>🧱 Layouts completos</h3>
+                    <p>Sites inteiros, dashboards, painéis e sistemas.</p>
+                </div>
+
+                <div style="background:#ffcc80; padding:1rem; border-radius:8px; text-align:center;">
+                    <h3>📐 Estruturas complexas</h3>
+                    <p>Múltiplas linhas e colunas com grande controle.</p>
+                </div>
+
+                <div style="background:#ffb74d; padding:1rem; border-radius:8px; text-align:center;">
+                    <h3>📱 Alta responsividade</h3>
+                    <p>Layouts que se ajustam automaticamente.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+            <div class="next-prev">
+                <a href="curso-css6.html" class="btn-cursos">Flexbox</a>
+                <a href="curso-css8.html" class="btn-cursos">Responsividade</a>
+            </div>
+
+        </main>
+    </div>
+
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

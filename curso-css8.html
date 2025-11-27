@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-css.css">
+    <title>CSS | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>🎨 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-css1.html">Introdução</a></li>
+                <li><a href="curso-css2.html">Seletores e Propriedades</a></li>
+                <li><a href="curso-css3.html">Cores e Unidades</a></li>
+                <li><a href="curso-css4.html" >Box Model</a></li>
+                <li><a href="curso-css5.html">Display e Layout</a></li>
+                <li><a href="curso-css6.html">Flexbox</a></li>
+                <li><a href="curso-css7.html">Grid Layout</a></li>
+                <li><a href="curso-css8.html"class="active">Responsividade</a></li>
+            </ul>
+        </aside>
+
+       <main class="main-content">
+            <div id="content-area">
+
+                <h1>Responsividade no CSS</h1>
+                <p>A <strong>responsividade</strong> é uma técnica fundamental no desenvolvimento web moderno. Ela permite que o site se adapte automaticamente a diferentes tamanhos de tela, como celulares, tablets, notebooks e TVs.</p>
+
+                <h2>📌 O que é Responsividade?</h2>
+                <p>Responsividade é a capacidade de um site ajustar seu layout, tamanho dos elementos e estrutura de acordo com o dispositivo usado pelo usuário.</p>
+
+                <div class="note-box">
+                    <strong>💡 Dica:</strong> Sites responsivos tornam a navegação mais confortável e melhoram a experiência do usuário.
+                </div>
+
+                <h2>1️⃣ Meta Viewport</h2>
+                <p>O primeiro passo para responsividade é garantir que o navegador interprete corretamente o tamanho da tela.</p>
+
+                <div class="code-example">
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                </div>
+
+                <p>Sem isso, a página “explode” no celular, aparecendo gigante e difícil de navegar.</p>
+
+                <h2>2️⃣ Unidades Flexíveis</h2>
+
+                <p>Para adaptar o tamanho dos elementos, utilizamos unidades como:</p>
+
+                <ul style="margin-left: 2rem;">
+                    <li><strong>%</strong> — porcentagem da largura disponível</li>
+                    <li><strong>vh / vW</strong> — altura/largura da tela</li>
+                    <li><strong>rem / em</strong> — tamanhos relativos à fonte</li>
+                    <li><strong>auto</strong> — ajusta sozinho</li>
+                </ul>
+
+                <div class="code-example">
+                    .imagem {  
+                        width: 100%;  
+                        max-width: 400px;  
+                    }
+                </div>
+
+                <h2>3️⃣ Media Queries</h2>
+
+                <p>Media Queries são regras especiais do CSS que mudam o layout conforme o tamanho da tela.</p>
+
+                <div class="code-example">
+                    @media (max-width: 768px) {  
+                        .container {  
+                            flex-direction: column;  
+                        }  
+                        nav ul {  
+                            flex-direction: column;  
+                        }  
+                    }
+                </div>
+
+                <p>📌 Isso significa: “Quando a tela tiver MENOS que 768px, mude o estilo”.</p>
+
+                <h2>4️⃣ Layouts Fluídos</h2>
+                <p>Em vez de usar larguras fixas (como 1200px), usamos valores que se ajustam:</p>
+
+                <div class="code-example">
+                    .conteudo {  
+                        width: 90%;  
+                        margin: auto;  
+                    }
+                </div>
+
+                <h2>5️⃣ Imagens Responsivas</h2>
+
+                <div class="code-example">
+                    img {  
+                        width: 100%;  
+                        height: auto;  
+                    }
+                </div>
+
+                <p>Isso evita que imagens transbordem para fora da tela do celular.</p>
+
+                <h2>6️⃣ Menu Responsivo</h2>
+                <p>O menu geralmente vira um “menu hambúrguer” no celular.</p>
+
+                <div class="code-example">
+                    @media (max-width: 768px) {
+                        nav ul {
+                            display: none;
+                        }
+                        .menu-icon {
+                            display: block;
+                        }
+                    }
+                </div>
+
+                <h2>7️⃣ Grid Responsivo</h2>
+
+                <div class="code-example">
+                    .grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    }
+                </div>
+
+                <p>O <strong>auto-fit</strong> cria colunas automaticamente conforme o tamanho disponível.</p>
+
+                <h2>🎯 Desafios Comuns</h2>
+                <ul style="margin-left: 2rem;">
+                    <li>Fontes muito pequenas no celular</li>
+                    <li>Imagens estourando</li>
+                    <li>Botões pequenos demais</li>
+                    <li>Elementos sobrepostos</li>
+                </ul>
+
+                <h2>🎓 Exercício Prático</h2>
+
+                <div class="exercise-box">
+                    <h4>Crie uma página com:</h4>
+                    <ul style="margin-left: 1rem;">
+                        <li>Um cabeçalho</li>
+                        <li>Um menu responsivo</li>
+                        <li>Uma imagem grande responsiva</li>
+                        <li>Um texto dividido em 2 colunas no PC e 1 coluna no celular</li>
+                    </ul>
+                    <p>Use media queries para ajustar o layout!</p>
+                </div>
+
+            </div>
+
+
+            <div class="next-prev">
+                <a href="curso-css7.html" class="btn-cursos">Grid Layout</a>
+                <a href="pratica.html" class="btn-cursos">Venha pratica</a>
+            </div>
+
+        </main>
+    </div>
+
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

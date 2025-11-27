@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-html.css">
+    <title>HTML – Introdução | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📗 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-html1.html">Introdução</a></li>
+                <li><a href="curso-html2.html">Tags Básicas</a></li>
+                <li><a href="curso-html3.html">Atributos</a></li>
+                <li><a href="curso-html4.html">Listas</a></li>
+                <li><a href="curso-html5.html" class="active">Imagens e Links</a></li>
+                <li><a href="curso-html6.html">Tabelas</a></li>
+                <li><a href="curso-html7.html">Formulários</a></li>
+            </ul>
+        </aside>
+
+
+        <main class="main-content">
+            <h1>Imagens e Links no HTML</h1>
+            <p>As imagens e os links são fundamentais para a construção de qualquer site. Com eles, você pode criar
+                páginas navegáveis e visuais mais atraentes.</p>
+
+            <h2>📸 Inserindo Imagens</h2>
+            <p>Para inserir uma imagem no HTML, utilizamos a tag <code>&lt;img&gt;</code>. Ela é uma tag que **não
+                possui fechamento** e precisa de atributos obrigatórios.</p>
+
+            <div class="code-example">
+                &lt;img src="cachorro.jpg" alt="Um cachorro fofo" width="300"&gt;
+            </div>
+
+            <h3>Atributos importantes da tag &lt;img&gt;</h3>
+            <ul>
+                <li><strong>src</strong>: caminho da imagem</li>
+                <li><strong>alt</strong>: texto alternativo (acessibilidade e SEO)</li>
+                <li><strong>width / height</strong>: largura e altura</li>
+                <li><strong>title</strong>: texto quando o cursor passa por cima</li>
+            </ul>
+
+            <div class="note-box">
+                <strong>💡 Dica:</strong> Sempre coloque um <strong>alt</strong> para descrever a imagem. Isso ajuda
+                deficientes visuais e melhora o SEO do seu site.
+            </div>
+
+            <h2>🌐 Criando Links</h2>
+            <p>Os links são criados com a tag <code>&lt;a&gt;</code>. Ela leva o usuário para outra página ou site.</p>
+
+            <div class="code-example">
+                &lt;a href="https://www.google.com"&gt;Ir para o Google&lt;/a&gt;
+            </div>
+
+            <h3>Atributos principais de &lt;a&gt;</h3>
+            <ul>
+                <li><strong>href</strong>: destino do link</li>
+                <li><strong>target="_blank"</strong>: abre em nova aba</li>
+                <li><strong>title</strong>: texto ao colocar o mouse em cima</li>
+            </ul>
+
+            <h3>🔗 Exemplo com nova aba</h3>
+            <div class="code-example">
+                &lt;a href="https://youtube.com" target="_blank" title="Abrir YouTube"&gt;Visitar YouTube&lt;/a&gt;
+            </div>
+
+            <h2>🖼️ Transformando Imagens em Links</h2>
+            <p>Você também pode transformar uma imagem em um link clicável:</p>
+
+            <div class="code-example">
+                &lt;a href="pagina.html"&gt;
+                &lt;img src="logo.png" alt="Logo"&gt;
+                &lt;/a&gt;
+            </div>
+
+            <h2>💼 Exemplos Práticos</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+
+                <div class="note-box" style="background:#ffe9d6; border-left:4px solid #e67e22;">
+                    <h4>🧩 Banner no topo do site</h4>
+                    <p>Use a tag <code>&lt;img&gt;</code> para imagens grandes.</p>
+                </div>
+
+                <div class="note-box" style="background:#ffe9d6; border-left:4px solid #e67e22;">
+                    <h4>🔗 Menu com ícones</h4>
+                    <p>Ícones podem ser imagens com links para páginas internas.</p>
+                </div>
+
+                <div class="note-box" style="background:#ffe9d6; border-left:4px solid #e67e22;">
+                    <h4>📎 Links de download</h4>
+                    <p>Você pode linkar PDFs, arquivos ZIP, docs e muito mais!</p>
+                </div>
+
+            </div>
+
+            <h2>🎯 Exercício Prático</h2>
+            <div class="exercise-box">
+                <h4>Crie uma página contendo:</h4>
+                <ul>
+                    <li>Uma imagem com largura 300px</li>
+                    <li>Um link que abre em nova aba</li>
+                    <li>Uma imagem que funciona como botão/link</li>
+                </ul>
+            </div>
+
+
+            <div class="next-prev">
+                <a href="curso-html4.html" class="btn-cursos">Listas</a>
+                <a href="curso-html6.html" class="btn-cursos">Tabelas</a>
+            </div>
+
+        </main>
+    </div>
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

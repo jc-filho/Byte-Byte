@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-js.css">
+    <title> JavaScript | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!---- HEADER ---->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!---- FIM HEADER ---->
+
+    <div class="container-cursos">
+
+        <!---- MENU LATERAL ---->
+        <aside class="sidebar">
+            <h3>📚 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-js1.html" >Introdução</a></li>
+                <li><a href="curso-js2.html">Variáveis</a></li>
+                <li><a href="curso-js3.html"class="active">Operadores</a></li>
+                <li><a href="curso-js4.html">Funções</a></li>
+                <li><a href="curso-js5.html">Condicionais</a></li>
+                <li><a href="curso-js6.html">Loops</a></li>
+                <li><a href="curso-js7.html">Objetos</a></li>
+                <li><a href="curso-js8.html">Arrays</a></li>
+                <li><a href="curso-js9.html">DOM</a></li>
+            </ul>
+        </aside>
+
+        <!---- CONTEÚDO PRINCIPAL ---->
+              <main class="main-content">
+            <h1>Operadores em JavaScript</h1>
+
+            <p>
+                Os operadores são símbolos utilizados para realizar operações em valores e variáveis no JavaScript. 
+                Eles são extremamente importantes porque permitem criar cálculos, comparações, decisões, repetições 
+                e diversas funcionalidades essenciais dentro dos programas.
+            </p>
+
+            <h2>🔢 Operadores Aritméticos</h2>
+            <p>Servem para fazer cálculos matemáticos.</p>
+
+            <div class="code-example">
+                let a = 10;<br>
+                let b = 3;<br><br>
+                console.log(a + b); // soma<br>
+                console.log(a - b); // subtração<br>
+                console.log(a * b); // multiplicação<br>
+                console.log(a / b); // divisão<br>
+                console.log(a % b); // resto<br>
+                console.log(a ** b); // exponenciação
+            </div>
+
+            <table class="table-js">
+                <tr><th>Operador</th><th>Função</th><th>Exemplo</th></tr>
+                <tr><td>+</td><td>Soma</td><td>5 + 2 = 7</td></tr>
+                <tr><td>-</td><td>Subtração</td><td>5 - 2 = 3</td></tr>
+                <tr><td>*</td><td>Multiplicação</td><td>5 * 2 = 10</td></tr>
+                <tr><td>/</td><td>Divisão</td><td>10 / 2 = 5</td></tr>
+                <tr><td>%</td><td>Resto</td><td>10 % 3 = 1</td></tr>
+                <tr><td>**</td><td>Exponenciação</td><td>2 ** 3 = 8</td></tr>
+            </table>
+
+            <h2>⚖️ Operadores de Comparação</h2>
+            <p>Utilizados para comparar valores. Retornam verdadeiro (<strong>true</strong>) ou falso (<strong>false</strong>).</p>
+
+            <div class="code-example">
+                5 == "5"   // true (compara apenas valor)<br>
+                5 === "5"  // false (valor e tipo)<br>
+                5 != 3     // true<br>
+                5 > 3      // true<br>
+                5 <= 3     // false
+            </div>
+
+            <table class="table-js">
+                <tr><th>Operador</th><th>Significado</th></tr>
+                <tr><td>==</td><td>Igual (valor)</td></tr>
+                <tr><td>===</td><td>Igual estrito (valor e tipo)</td></tr>
+                <tr><td>!=</td><td>Diferente</td></tr>
+                <tr><td>!==</td><td>Diferente estrito</td></tr>
+                <tr><td>></td><td>Maior que</td></tr>
+                <tr><td><</td><td>Menor que</td></tr>
+                <tr><td>>=</td><td>Maior ou igual</td></tr>
+                <tr><td><=</td><td>Menor ou igual</td></tr>
+            </table>
+
+            <h2>🔗 Operadores Lógicos</h2>
+            <p>São usados para combinar condições.</p>
+
+            <div class="code-example">
+                let idade = 20;<br><br>
+                console.log(idade > 18 && idade < 30); // AND<br>
+                console.log(idade < 18 || idade > 60); // OR<br>
+                console.log(!true); // NOT
+            </div>
+
+            <table class="table-js">
+                <tr><th>Operador</th><th>Nome</th><th>Significado</th></tr>
+                <tr><td>&&</td><td>AND</td><td>Verdadeiro se todas forem verdadeiras</td></tr>
+                <tr><td>||</td><td>OR</td><td>Verdadeiro se uma for verdadeira</td></tr>
+                <tr><td>!</td><td>NOT</td><td>Inverte o valor lógico</td></tr>
+            </table>
+
+            <h2>📌 Operadores de Atribuição</h2>
+
+            <p>São usados para atualizar valores de variáveis.</p>
+
+            <div class="code-example">
+                let x = 10;<br>
+                x += 5;  // x = x + 5<br>
+                x -= 3;  // x = x - 3<br>
+                x *= 2;  // x = x * 2<br>
+                x /= 4;  // x = x / 4
+            </div>
+
+            <table class="table-js">
+                <tr><th>Operador</th><th>Uso</th></tr>
+                <tr><td>+=</td><td>Somar e atribuir</td></tr>
+                <tr><td>-=</td><td>Subtrair e atribuir</td></tr>
+                <tr><td>*=</td><td>Multiplicar e atribuir</td></tr>
+                <tr><td>/=</td><td>Dividir e atribuir</td></tr>
+                <tr><td>%=</td><td>Resto e atribuir</td></tr>
+                <tr><td>**=</td><td>Exponenciar e atribuir</td></tr>
+            </table>
+
+            <h2>🎯 Mini Desafio</h2>
+            <div class="exercise-box">
+                <p>Crie um programa que:</p>
+                <ul>
+                    <li>Peça a idade do usuário</li>
+                    <li>Use operadores lógicos e de comparação</li>
+                    <li>Mostre se ele é maior de idade</li>
+                    <li>Mostre se ele pode dirigir</li>
+                </ul>
+            </div>
+
+
+            <div class="next-prev">
+               <a href="curso-js2.html" class="btn-cursos">Variáveis</a>
+                <a href="curso-js4.html" class="btn-cursos">Funções</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+</body>
+
+</html>

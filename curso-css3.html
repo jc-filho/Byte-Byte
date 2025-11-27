@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-css.css">
+    <title>CSS | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>🎨 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-css1.html">Introdução</a></li>
+                <li><a href="curso-css2.html" >Seletores e Propriedades</a></li>
+                <li><a href="curso-css3.html"class="active">Cores e Unidades</a></li>
+                <li><a href="curso-css4.html">Box Model</a></li>
+                <li><a href="curso-css5.html">Display e Layout</a></li>
+                <li><a href="curso-css6.html">Flexbox</a></li>
+                <li><a href="curso-css7.html">Grid Layout</a></li>
+                <li><a href="curso-css8.html">Responsividade</a></li>
+            </ul>
+        </aside>
+
+      <main class="main-content">
+            <h1>Cores e Unidades no CSS</h1>
+            <p>As cores e unidades são fundamentais para criar estilos mais bonitos, organizados e responsivos no CSS. Nesta aula você aprenderá como definir cores de várias maneiras e como utilizar diferentes unidades de medida.</p>
+
+            <!-- CORES -->
+            <h2>🎨 Tipos de Cores no CSS</h2>
+
+            <h3>1. Nome das cores</h3>
+            <p>O CSS possui mais de 140 nomes de cores já definidos.</p>
+            <div class="code-example">
+                color: orange;<br>
+                background: tomato;<br>
+                border-color: gold;
+            </div>
+
+            <h3>2. Cores Hexadecimais</h3>
+            <p>Formato mais comum: <code>#RRGGBB</code></p>
+            <div class="code-example">
+                color: #ff6600;<br>
+                background: #f39c12;
+            </div>
+
+            <h3>3. RGB</h3>
+            <div class="code-example">
+                color: rgb(255, 100, 0);<br>
+                background: rgb(255, 150, 70);
+            </div>
+
+            <h3>4. RGBA (com transparência)</h3>
+            <div class="code-example">
+                background: rgba(255, 140, 0, 0.5);
+            </div>
+
+            <h3>5. HSL (Hue, Saturation, Lightness)</h3>
+            <p>É uma forma mais intuitiva de trabalhar com cores.</p>
+            <div class="code-example">
+                color: hsl(30, 100%, 50%);<br>
+                background: hsl(25, 90%, 60%);
+            </div>
+
+            <div class="note-box">
+                💡 <strong>Dica:</strong> HSL é excelente para criar paletas harmônicas.
+            </div>
+
+            <!-- UNIDADES -->
+            <h2>📏 Unidades no CSS</h2>
+
+            <p>No CSS usamos unidades para definir tamanhos, distâncias, espaçamentos e muito mais.</p>
+
+            <h3>Unidades Absolutas</h3>
+            <ul>
+                <li><strong>px</strong> — pixel</li>
+                <li><strong>cm, mm</strong> — centímetros e milímetros</li>
+                <li><strong>in</strong> — polegadas</li>
+            </ul>
+
+            <div class="code-example">
+                font-size: 18px;<br>
+                margin: 10px;
+            </div>
+
+            <h3>Unidades Relativas</h3>
+            <ul>
+                <li><strong>%</strong> — relativo ao elemento pai</li>
+                <li><strong>em</strong> — relativo ao font-size do elemento pai</li>
+                <li><strong>rem</strong> — relativo ao font-size da raiz</li>
+                <li><strong>vw</strong> — porcentagem da largura da tela</li>
+                <li><strong>vh</strong> — porcentagem da altura da tela</li>
+            </ul>
+
+            <div class="code-example">
+                font-size: 2em;<br>
+                width: 80%;<br>
+                height: 50vh;
+            </div>
+
+            <h3>Comparação entre unidades</h3>
+            <div class="note-box">
+                ⚠️ <strong>Importante:</strong> sempre que quiser que o layout seja responsivo, prefira <strong>%</strong>, <strong>vw</strong>, <strong>vh</strong> ou <strong>rem</strong>.
+            </div>
+
+            <h2>📌 Exercício</h2>
+            <p>Crie uma caixa com:</p>
+            <ul>
+                <li>largura em <strong>%</strong></li>
+                <li>altura em <strong>vh</strong></li>
+                <li>cor de fundo em <strong>rgba()</strong></li>
+                <li>título colorido com <strong>hsl()</strong></li>
+            </ul>
+
+
+
+            <div class="next-prev">
+                <a href="curso-css2.html" class="btn-cursos">Seletores e Propriedades</a>
+                <a href="curso-css4.html" class="btn-cursos">Box Model</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

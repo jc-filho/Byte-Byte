@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/curso-html.css">
+    <title>HTML – Introdução | Byte&Byte</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!----HEADER----->
+    <header style="background-color: #184b88; padding-bottom: 30px ;">
+        <div class="container">
+            <nav>
+                <a>
+                    <img src="" class="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="pratica.html">Prática</a>
+                    <a class="btn" href="cursos.html">Cursos</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <img src="img/close.png" alt="icon-close    ">
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <img src="img/menu.png" alt="icon-menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!----FIM-HEADER----->
+
+    <div class="container-cursos">
+        <aside class="sidebar">
+            <h3>📗 Conteúdo</h3>
+            <ul>
+                <li><a href="curso-html1.html">Introdução</a></li>
+                <li><a href="curso-html2.html">Tags Básicas</a></li>
+                <li><a href="curso-html3.html">Atributos</a></li>
+                <li><a href="curso-html4.html">Listas</a></li>
+                <li><a href="curso-html5.html">Imagens e Links</a></li>
+                <li><a href="curso-html6.html" class="active">Tabelas</a></li>
+                <li><a href="curso-html7.html">Formulários</a></li>
+            </ul>
+        </aside>
+
+
+        <main class="main-content">
+
+            <h1>Tabelas em HTML</h1>
+            <p>As <strong>tabelas</strong> em HTML são usadas para organizar dados em linhas e colunas. Elas são muito
+                úteis para exibir informações estruturadas, como horários, relatórios, cadastros e estatísticas.</p>
+
+            <h2>⚙️ Estrutura Básica de uma Tabela</h2>
+            <div class="code-example">
+                &lt;table&gt;<br>
+                &nbsp;&nbsp;&lt;tr&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nome&lt;/th&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Idade&lt;/th&gt;<br>
+                &nbsp;&nbsp;&lt;/tr&gt;<br>
+                &nbsp;&nbsp;&lt;tr&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ana&lt;/td&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;17&lt;/td&gt;<br>
+                &nbsp;&nbsp;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </div>
+
+            <h2>📌 Tags importantes</h2>
+            <ul>
+                <li><strong>&lt;table&gt;</strong> – cria a tabela</li>
+                <li><strong>&lt;tr&gt;</strong> – cria uma linha</li>
+                <li><strong>&lt;td&gt;</strong> – cria uma célula comum</li>
+                <li><strong>&lt;th&gt;</strong> – cria uma célula de título (negrito + centralizado)</li>
+            </ul>
+
+            <h2>🎨 Estilizando Tabelas</h2>
+            <p>Com CSS podemos estilizar bordas, cores, espaçamento e até adicionar efeitos de zebra.</p>
+
+            <div class="code-example">
+                table {<br>
+                &nbsp;&nbsp;width: 100%;<br>
+                &nbsp;&nbsp;border-collapse: collapse;<br>
+                }<br><br>
+
+                th, td {<br>
+                &nbsp;&nbsp;border: 1px solid #e67e22;<br>
+                &nbsp;&nbsp;padding: 10px;<br>
+                }<br><br>
+
+                tr:nth-child(even) {<br>
+                &nbsp;&nbsp;background: #fdebd0;<br>
+                }
+            </div>
+
+            <h2>📊 Exemplo Completo</h2>
+
+            <table class="demo-table">
+                <tr>
+                    <th>Produto</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+                </tr>
+                <tr>
+                    <td>Notebook</td>
+                    <td>Eletrônicos</td>
+                    <td>R$ 3.500</td>
+                </tr>
+                <tr>
+                    <td>Fone de Ouvido</td>
+                    <td>Acessórios</td>
+                    <td>R$ 80</td>
+                </tr>
+                <tr>
+                    <td>Mouse Gamer</td>
+                    <td>Periféricos</td>
+                    <td>R$ 120</td>
+                </tr>
+            </table>
+
+            <h2>📌 Agrupando Cabeçalho e Corpo</h2>
+            <p>Para tabelas grandes, usamos:</p>
+
+            <ul>
+                <li><strong>&lt;thead&gt;</strong> – cabeçalho</li>
+                <li><strong>&lt;tbody&gt;</strong> – corpo</li>
+                <li><strong>&lt;tfoot&gt;</strong> – rodapé</li>
+            </ul>
+
+            <div class="code-example">
+                &lt;table&gt;<br>
+                &nbsp;&nbsp;&lt;thead&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;Produto&lt;/th&gt;&lt;th&gt;Valor&lt;/th&gt;&lt;/tr&gt;<br>
+                &nbsp;&nbsp;&lt;/thead&gt;<br><br>
+
+                &nbsp;&nbsp;&lt;tbody&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Café&lt;/td&gt;&lt;td&gt;R$ 12&lt;/td&gt;&lt;/tr&gt;<br>
+                &nbsp;&nbsp;&lt;/tbody&gt;<br><br>
+
+                &nbsp;&nbsp;&lt;tfoot&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;R$ 12&lt;/td&gt;&lt;/tr&gt;<br>
+                &nbsp;&nbsp;&lt;/tfoot&gt;<br>
+                &lt;/table&gt;
+            </div>
+
+            <h2>📌 Mesclando Células (colspan e rowspan)</h2>
+            <p>Podemos unir células usando:</p>
+
+            <ul>
+                <li><strong>colspan</strong> – une colunas</li>
+                <li><strong>rowspan</strong> – une linhas</li>
+            </ul>
+
+            <div class="code-example">
+                &lt;table&gt;<br>
+                &nbsp;&nbsp;&lt;tr&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;Cabeçalho&lt;/td&gt;<br>
+                &nbsp;&nbsp;&lt;/tr&gt;<br>
+                &nbsp;&nbsp;&lt;tr&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="2"&gt;Lateral&lt;/td&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Linha 1&lt;/td&gt;<br>
+                &nbsp;&nbsp;&lt;/tr&gt;<br>
+                &nbsp;&nbsp;&lt;tr&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Linha 2&lt;/td&gt;<br>
+                &nbsp;&nbsp;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </div>
+
+            <h2>📚 Quando usar tabelas?</h2>
+            <p>Use tabelas quando quiser exibir informações **tabulares**, como:</p>
+
+            <ul>
+                <li>horários escolares;</li>
+                <li>listas de produtos;</li>
+                <li>comparações de preços;</li>
+                <li>tabelas estatísticas;</li>
+                <li>registros ou bancos de dados organizados.</li>
+            </ul>
+
+            <div class="exercise-box">
+                <h4>🎯 Desafio Prático</h4>
+                <p>Crie uma tabela contendo:</p>
+                <ul>
+                    <li>5 alunos</li>
+                    <li>Colunas: Nome, Nota 1, Nota 2, Média</li>
+                    <li>Use cores e estilização com CSS</li>
+                </ul>
+            </div>
+
+            <div class="next-prev">
+                <a href="curso-html5.html" class="btn-cursos">Imagens e links</a>
+                <a href="curso-html7.html" class="btn-cursos">Formulários</a>
+            </div>
+
+        </main>
+    </div>
+    <footer>
+        <p>© Desenvolvido pelos alunos do <span>3° INFO - 2025</span> | Byte&Byte</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
