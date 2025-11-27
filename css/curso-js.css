@@ -7,6 +7,7 @@
     padding: 2rem;
 }
 
+/* Sidebar */
 .sidebar {
     background: white;
     border-radius: 8px;
@@ -20,15 +21,14 @@
 .sidebar h3 {
     color: #2C3E50;
     margin-bottom: 1rem;
-    border-bottom: 2px solid#F7DF1E;
+    border-bottom: 2px solid #F7DF1E;
     padding-bottom: 0.5rem;
     font-size: 30px;
-
 }
 
 .sidebar ul {
-    color: #2C3E50;
     list-style: none;
+    color: #2C3E50;
 }
 
 .sidebar li {
@@ -51,6 +51,7 @@
     color: black;
 }
 
+/* Main content */
 .main-content {
     background: white;
     border-radius: 8px;
@@ -76,11 +77,11 @@
 }
 
 .main-content h3 {
-    font-size: 25PX;
+    font-size: 25px;
     color: #2C3E50;
 }
 
-.main-content P {
+.main-content p {
     color: #2C3E50;
 }
 
@@ -88,10 +89,11 @@ h2 {
     color: #2C3E50;
     margin: 2rem 0 1rem 0;
     font-size: 1.8rem;
-    border-left: 4px solid#F7DF1E;
+    border-left: 4px solid #F7DF1E;
     padding-left: 1rem;
 }
 
+/* Intro */
 .intro-box {
     background: linear-gradient(135deg, #74B9FF, #0984E3);
     color: white;
@@ -107,6 +109,7 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* Code examples */
 .code-example {
     background-color: #2D3748;
     color: #E2E8F0;
@@ -132,6 +135,7 @@ h2 {
     font-weight: bold;
 }
 
+/* Buttons */
 .try-it-btn {
     background: #27AE60;
     color: #000000;
@@ -148,6 +152,7 @@ h2 {
     background: #229954;
 }
 
+/* Notes & Exercises */
 .note-box {
     background: #FFF3CD;
     border: 1px solid #FFEAA7;
@@ -175,6 +180,7 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
+/* Next/Prev Buttons */
 .next-prev {
     display: flex;
     justify-content: space-between;
@@ -193,9 +199,10 @@ h2 {
 }
 
 .next-prev a:hover {
-    background: #F7DF1E;
+    background: #f5d80d;
 }
 
+/* Console */
 .interactive-console {
     background: #1A1A1A;
     color: #00FF00;
@@ -211,15 +218,37 @@ h2 {
     background: transparent;
     border: none;
     color: #00FF00;
-    font-family: inherit;
     width: 100%;
     outline: none;
 }
 
+/* Hover */
 .btn-cursos:hover {
     opacity: 0.85;
 }
 
+/* ----------------------- */
+/*      RESPONSIVIDADE     */
+/* ----------------------- */
+
+/* Tablets – até 992px */
+@media (max-width: 992px) {
+    .container-cursos {
+        grid-template-columns: 200px 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Celulares – até 768px */
 @media (max-width: 768px) {
     .container-cursos {
         grid-template-columns: 1fr;
@@ -228,9 +257,59 @@ h2 {
 
     .sidebar {
         position: static;
+        width: 100%;
     }
 
-    .nav-menu {
-        display: none;
+    .sidebar h3 {
+        font-size: 24px;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    .main-content h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .intro-box {
+        padding: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .next-prev {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .next-prev a {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Celulares pequenos – até 480px */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 1.2rem;
+    }
+
+    .code-example {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+
+    .try-it-btn {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .sidebar h3 {
+        font-size: 20px;
     }
 }
