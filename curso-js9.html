@@ -167,15 +167,25 @@
             <h2>⭐ Exemplo Prático Completo</h2>
 
             <div class="code-example">
-                <button id="trocar">Trocar cor</button>
-
-                const box = document.querySelector(".box");
-                const trocar = document.getElementById("trocar");
-
-                trocar.addEventListener("click", () => {
-                    box.style.background = "orange";
-                    box.textContent = "Cor trocada!";
-                });
+                &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;JavaScript Alert Example&lt;/title&gt;
+    &lt;script&gt;
+        // Função JavaScript que exibe o alerta
+        function showAlert() {
+            alert("Hello, this is a JavaScript alert!");
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Exemplo de Alerta JavaScript&lt;/h1&gt;
+    &lt;p&gt;Clique no botão abaixo para disparar o alerta:&lt;/p&gt;
+    
+    // O atributo onclick chama a função showAlert()
+    &lt;button onclick="showAlert()"&gt;Show Alert&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
             </div>
 
             <div class="exercise-box">
@@ -205,4 +215,5 @@
 
 
 </html>
+
 
